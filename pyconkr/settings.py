@@ -46,6 +46,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'pyconkr/views/templates'),
+)
+
 ROOT_URLCONF = 'pyconkr.urls'
 
 WSGI_APPLICATION = 'pyconkr.wsgi.application'
