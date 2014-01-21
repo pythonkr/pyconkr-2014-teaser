@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PyConKr</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    {% block head %}{% endblock %}
+    <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet" type="text/css">
+    {% block css %}{% endblock %}
+    <script src="{{ STATIC_URL }}js/base.js"></script>
+    {% block js %}{% endblock %}
+</head>
+<body>
+<div class="account">
+    <li><a href="">Sign up</a></li>
+    <li><a href="">Login</a></li>
+</div>
+
+<header class="header">
+    <div class="logo">
+        <h1>Pycon201x Seoul</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="">Program</a></li>
+            <li><a href="">Sponsors</a></li>
+            <li><a href="">Propose</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Venue</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="body">
+    {% block body %}{% endblock %}
+</div>
+
+<footer class="footer">
+
+</footer>
+</body>
+</html>
