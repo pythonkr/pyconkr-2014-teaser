@@ -5,8 +5,12 @@
 </head>
 <body>
 	<div class="account">
-		<li><a href="">Sign up</a></li>
-		<li><a href="">Login</a></li>
+		{% if user.is_authenticated %}
+			<li><a href="{% url 'logout' %}">Logout</a></li>
+		{% else %}
+			<li><a href="{% url 'signup' %}">Sign up</a></li>
+			<li><a href="{% url 'login' %}">Login</a></li>
+		{% endif %}
 	</div>
 
 	<div class="header">
