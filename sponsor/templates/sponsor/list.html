@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block body %}
+<div>
+    <div class="form">
+        <dl>
+        {% for sponsor in sponsors %}
+            <dt>{{ sponsor.name }} <a href="{{ sponsor.url }}">{{ sponsor.url }}</a></dt>
+            <dd>{{ sponsor.description }}</dd>
+        {% endfor %}
+        </dl>
+    </div>
+</div>
+{% endblock %}

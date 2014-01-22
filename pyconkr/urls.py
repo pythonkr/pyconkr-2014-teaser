@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
-from django.contrib import admin; admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 from django.conf import settings
 from django.conf.urls.static import static
 from page.views import Index, About
 from account.views import SignupFormView, LoginFormView, LogoutView
+from sponsor.views import SponsorListView
 
 
 urlpatterns = patterns('',
@@ -16,9 +18,12 @@ urlpatterns = patterns('',
     url(r'^login/$', LoginFormView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
 
+    # sponsor
+    url(r'^sponsors/$', SponsorListView.as_view(), name='sponsors'),
+
+    # admin
     url(r'^admin/', include(admin.site.urls)),
 )
-
 
 # static files (for app)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
