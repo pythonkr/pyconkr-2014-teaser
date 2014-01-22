@@ -1,2 +1,2 @@
-pyconkr
+PyConKr
 =======

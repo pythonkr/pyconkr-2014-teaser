@@ -41,7 +41,6 @@ class LoginFormView(View):
 
     def get(self, request):
         # TODO : login여부 확인
-        print request.user.is_authenticated()
         return render(request, self.template_name, self.ctx)
 
     def post(self, request):
