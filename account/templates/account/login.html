@@ -2,15 +2,15 @@
 
 {% block body %}
 <div>
-	<div class="errors">
+    <div class="errors">
 
-	</div>
-	<div class="form">
-		<form method="post" action="{% url 'login' %}">
-			{% csrf_token %}
-			{{ auth_form }}
-			<input type="submit" value="Login" />
-		</form>
-	</div>
+    </div>
+    <div class="form">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ auth_form }}
+            <input type="submit" value="Login" />
+        </form>
+    </div>
 </div>
 {% endblock %}

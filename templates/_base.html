@@ -15,12 +15,14 @@
 </head>
 <body>
 <div class="account">
-	{% if user.is_authenticated %}
-		<li><a href="{% url 'logout' %}">Logout</a></li>
-	{% else %}
-		<li><a href="{% url 'signup' %}">Sign up</a></li>
-		<li><a href="{% url 'login' %}">Login</a></li>
-	{% endif %}
+    <ul>
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+        <li><a href="{% url 'signup' %}">Sign up</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    </ul>
 </div>
 
 <header class="header">
