@@ -36,6 +36,7 @@ LOCAL_APPS = (
     'pyconkr',
     'account',
     'sponsor',
+    'news',
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 

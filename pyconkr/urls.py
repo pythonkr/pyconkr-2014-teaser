@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from news.views import NewsListView, NewsDetailView
+
 admin.autodiscover()
 from django.conf import settings
 from django.conf.urls.static import static
@@ -20,6 +22,10 @@ urlpatterns = patterns('',
 
     # sponsor
     url(r'^sponsors/$', SponsorListView.as_view(), name='sponsors'),
+
+    # news
+    url(r'^news/$', NewsListView.as_view(), name='news_list'),
+    url(r'^news/([0-9]+)/$', NewsDetailView.as_view(), name='news_detail'),
 
     # admin
     url(r'^admin/', include(admin.site.urls)),
