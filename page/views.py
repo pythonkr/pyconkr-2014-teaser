@@ -7,4 +7,3 @@ class Index(TemplateView):
 
 class About(TemplateView):
     template_name = 'page/about.html'
-

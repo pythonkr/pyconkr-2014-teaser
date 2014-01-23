@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'x)mp5v)30@fc7#pnnoz-_yeg**=e6kz6x8aiwvd(dio5m2@4_3'
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['pycon.kr',]
+ALLOWED_HOSTS = ['pycon.kr', ]
 
 # Application definition
 DJANGO_APPS = (
