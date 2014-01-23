@@ -24,7 +24,8 @@ class SignupFormView(View):
         if form.is_valid():
             form.save()
             data = form.cleaned_data
-            user = authenticate(username=data['username'], password=data['password1'])
+            user = authenticate(username=data['username'],
+                                password=data['password1'])
             login(request, user)
             return redirect('index')  # TODO : use 'next_url'
         else:
