@@ -37,6 +37,7 @@ LOCAL_APPS = (
     'account',
     'sponsor',
     'news',
+    'venue',
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 

@@ -2,6 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from news.views import NewsListView, NewsDetailView
+from venue.views import VenueView
 
 admin.autodiscover()
 from django.conf import settings
@@ -26,6 +27,9 @@ urlpatterns = patterns('',
     # news
     url(r'^news/$', NewsListView.as_view(), name='news_list'),
     url(r'^news/([0-9]+)/$', NewsDetailView.as_view(), name='news_detail'),
+    
+    # venue
+    url(r'^venue/$', VenueView.as_view(), name='venue'),
 
     # admin
     url(r'^admin/', include(admin.site.urls)),

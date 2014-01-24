@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+
+{% block css %}
+<style type="text/css">
+#map-canvas {
+    width: 300px;
+    height: 300px;
+}
+</style>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript">
+google.maps.event.addDomListener(window, 'load', function() {
+    new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: new google.maps.LatLng(37.511235,127.059599)
+    });
+});
+</script>
+
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Place</h1>
+    <div>
+        <h3>Filter</h3>
+        <ul>
+            <li><label><input type="checkbox"/>Where to Sleep</label></li>
+            <li><label><input type="checkbox"/>Where to Eat</label></li>
+        </ul>
+    </div>
+    <div id="map-canvas"></div>
+</div>
+{% endblock %}
