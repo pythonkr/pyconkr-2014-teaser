@@ -41,6 +41,8 @@ LOCAL_APPS = (
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
+AUTH_USER_MODEL = 'account.SiteUser'
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,7 +68,6 @@ WSGI_APPLICATION = 'pyconkr.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

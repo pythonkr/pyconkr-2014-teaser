@@ -1,15 +1,14 @@
 # coding=utf-8
 from django.contrib.auth import authenticate, logout, login
 from django.shortcuts import render, redirect
-from django.core.urlresolvers import reverse
 from django.views.generic.base import View
-from django.views.generic import TemplateView
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
+from account.forms import SiteUserCreationForm
 
 
 class SignupFormView(View):
     template_name = 'account/signup.html'
-    signup_form = UserCreationForm
+    signup_form = SiteUserCreationForm
     ctx = {
         'signup_form': signup_form
     }
@@ -24,7 +23,7 @@ class SignupFormView(View):
         if form.is_valid():
             form.save()
             data = form.cleaned_data
-            user = authenticate(username=data['username'],
+            user = authenticate(username=data['email'],
                                 password=data['password1'])
             login(request, user)
             return redirect('index')  # TODO : use 'next_url'
