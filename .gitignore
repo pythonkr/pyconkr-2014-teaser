@@ -30,3 +30,5 @@ collected_static
 # pyCharm
 .idea/
 
+# autoenv:
+.env
