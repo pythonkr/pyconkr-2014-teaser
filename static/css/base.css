@@ -1,4 +1,152 @@
+html,
+body {
+  height: 100%;
+  font-size: 15px;
+  line-height: 27px;
+  font-family: 'Open Sans', verdana, sans-serif;
+  color: #fbfaf9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+div {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+a {
+  color: #fbfaf9;
+  -webkit-transition: color 100ms;
+  -moz-transition: color 100ms;
+  -o-transition: color 100ms;
+  transition: color 100ms;
+}
+a:hover {
+  color: #8bfffa;
+}
 body {
   padding: 0;
   margin: 0;
+  color: #fbfaf9;
+}
+body .contents-wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+body .btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #f17100;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  line-height: 18px;
+  font-weight: 700;
+  color: #fbfaf9;
+  text-decoration: none;
+  -webkit-transition: background-color 100ms ease-in-out;
+  -moz-transition: background-color 100ms ease-in-out;
+  -o-transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  border: none;
+  white-space: nowrap;
+}
+body .btn:hover {
+  background: #3a363a;
+}
+header#header {
+  height: 100%;
+}
+header#header div.top {
+  padding: 30px 0;
+}
+header#header div.top:after {
+  clear: both;
+}
+header#header div.top nav {
+  float: right;
+  display: inline;
+  font-size: 11px;
+}
+header#header div.top nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+header#header div.top nav ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+header#header div.top nav ul li a.menu {
+  padding: 5px 14px;
+}
+header#header div.content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 70px;
+  line-height: 72px;
+}
+header#header div.content h2 {
+  margin: 10px 0 0;
+  padding: 0 0 0 310px;
+  font-size: 20px;
+  line-height: 20px;
+}
+header#header div.content form.register {
+  margin-top: 40px;
+}
+header#header div.content form.register div.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+header#header div.content form.register div.input-wrapper input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: #fbfaf9;
+  color: #444444;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 11px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+header#header div.content form.register div.input-wrapper button.btn {
+  background: #66aa11;
+  font-size: 15px;
+  cursor: pointer;
+}
+header#header div.content form.register div.input-wrapper button.btn:hover {
+  background: #3a363a;
+}
+header#header div.content form.register div.description {
+  font-size: 11px;
 }
