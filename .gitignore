@@ -32,3 +32,6 @@ collected_static
 
 # autoenv:
 .env
+
+# local settings
+local_settings.py*

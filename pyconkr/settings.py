@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'x)mp5v)30@fc7#pnnoz-_yeg**=e6kz6x8aiwvd(dio5m2@4_3'
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['pycon.kr', ]
 
@@ -98,3 +98,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+# Call local_settings
+try:
+    from pyconkr.local_settings import *
+except ImportError, e:
+    pass
