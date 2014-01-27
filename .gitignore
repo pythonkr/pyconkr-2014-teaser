@@ -30,3 +30,8 @@ collected_static
 # pyCharm
 .idea/
 
+# autoenv:
+.env
+
+# local settings
+local_settings.py*
