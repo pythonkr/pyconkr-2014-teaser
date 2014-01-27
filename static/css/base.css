@@ -4,13 +4,12 @@ body {
   font-size: 15px;
   line-height: 27px;
   font-family: 'Open Sans', verdana, sans-serif;
-  color: #fbfaf9;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  color: #474f61;
 }
 body {
   padding: 0;
   margin: 0;
-  color: #fbfaf9;
+  color: #474f61;
 }
 div {
   margin: 0;
@@ -22,7 +21,7 @@ div {
   vertical-align: baseline;
 }
 a {
-  color: #fbfaf9;
+  color: #474f61;
   -webkit-transition: color 100ms;
   -moz-transition: color 100ms;
   -o-transition: color 100ms;
@@ -75,7 +74,7 @@ input {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  background: #fbfaf9;
+  background: #474f61;
   color: #444444;
   border: none;
   outline: none;
@@ -103,6 +102,8 @@ div.input-wrapper {
   position: relative;
 }
 header#header {
+  background-color: #344047;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   padding: 30px 0;
   height: 40px;
 }
@@ -110,6 +111,7 @@ header#header .logo {
   float: left;
   padding: 5px 14px;
   margin-right: 60px;
+  color: #fbfaf9;
 }
 header#header nav ul {
   margin: 0;
@@ -122,6 +124,9 @@ header#header nav ul li.menu-item {
   margin-left: 5px;
   font-size: 15px;
   padding: 5px 14px;
+}
+header#header nav ul li.menu-item a {
+  color: #fbfaf9;
 }
 header#header nav.menu {
   float: left;
@@ -152,5 +157,6 @@ div.content form.register div.description {
   font-size: 11px;
 }
 .index.content {
+  color: #fbfaf9;
   padding: 200px;
 }
