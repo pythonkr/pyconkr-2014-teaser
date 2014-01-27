@@ -12,6 +12,12 @@ html, body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  color: @text-color;
+}
+
 div {
   margin: 0;
   padding: 0;
@@ -28,157 +34,150 @@ a {
   -moz-transition: color 100ms;
   -o-transition: color 100ms;
   transition: color 100ms;
-
   &:hover {
     color: #8bfffa;
   }
 }
 
-body {
-  padding: 0;
-  margin: 0;
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: @btn-background;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+
+  border-radius: 3px;
+  background-clip: padding-box;
+
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  line-height: 18px;
+  font-weight: 700;
   color: @text-color;
+  text-decoration: none;
 
-  .contents-wrapper {
-    margin: 0 auto;
-    width: @site-width;
+  -webkit-transition: background-color 100ms ease-in-out;
+  -moz-transition: background-color 100ms ease-in-out;
+  -o-transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  border: none;
+  white-space: nowrap;
+
+  &:hover {
+    background: @btn-background-hover;
   }
+}
 
-  .btn {
-    display: inline-block;
-    padding: 12px 18px;
-    background: @btn-background;
-    -webkit-border-radius: 3px;
-    -webkit-background-clip: padding-box;
+button.btn {
+  background: #66aa11;
+  font-size: 15px;
+  cursor: pointer;
+}
 
-    -moz-border-radius: 3px;
-    -moz-background-clip: padding;
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: @text-color;
+  color: #444444;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 11px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-    border-radius: 3px;
-    background-clip: padding-box;
+div.contents-wrapper {
+  margin: 0 auto;
+  width: @site-width;
+}
 
-    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    line-height: 18px;
-    font-weight: 700;
-    color: @text-color;
-    text-decoration: none;
+div.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
 
-    -webkit-transition: background-color 100ms ease-in-out;
-    -moz-transition: background-color 100ms ease-in-out;
-    -o-transition: background-color 100ms ease-in-out;
-    transition: background-color 100ms ease-in-out;
-
-    text-transform: uppercase;
-    text-align: center;
-
-    -webkit-transform: scale3d(1, 1, 1);
-    -moz-transform: scale3d(1, 1, 1);
-    -o-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    border: none;
-    white-space: nowrap;
-
-    &:hover {
-      background: @btn-background-hover;
+header#header {
+  padding: 30px 0;
+  height: 40px;
+  .logo {
+    float: left;
+    padding: 5px 14px;
+    margin-right: 60px;
+  }
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      li.menu-item {
+        float: left;
+        margin-left: 5px;
+        font-size: 15px;
+        padding: 5px 14px;
+      }
+    }
+  }
+  nav.menu {
+    float: left;
+  }
+  nav.account-menu {
+    float: right;
+    .btn {
+      font-size: 12px;
+      padding: 6px;
     }
   }
 }
 
-header#header {
-  height: 100%;
+div.content {
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+    line-height: 72px;
+  }
+  h2 {
+    margin: 10px 0 0;
+    padding: 0 0 0 310px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
-  div.top {
-    &:after {
-      clear: both;
-    }
-    padding: 30px 0;
-
-    nav {
-      float: right;
-      display: inline;
+  form.register {
+    margin-top: 40px;
+    div.description {
       font-size: 11px;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: inline;
-
-        li {
-          display: inline-block;
-          margin-left: 5px;
-
-          a.menu {
-            padding: 5px 14px;
-          }
-        }
-      }
     }
   }
+}
 
-  div.content {
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 70px;
-      line-height: 72px;
-    }
-    h2 {
-      margin: 10px 0 0;
-      padding: 0 0 0 310px;
-      font-size: 20px;
-      line-height: 20px;
-    }
-
-    form.register {
-      margin-top: 40px;
-
-      div.input-wrapper {
-        display: inline-block;
-        position: relative;
-
-        input {
-          font-family: inherit;
-          font-size: inherit;
-          font-weight: inherit;
-          background: @text-color;
-          color: #444444;
-          border: none;
-          outline: none;
-          margin: 0;
-          padding: 11px;
-          -webkit-border-radius: 3px;
-          -webkit-background-clip: padding-box;
-          -moz-border-radius: 3px;
-          -moz-background-clip: padding;
-          border-radius: 3px;
-          background-clip: padding-box;
-          -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-          -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-        }
-
-        button.btn {
-          background: #66aa11;
-          font-size: 15px;
-          cursor: pointer;
-
-          &:hover {
-            background: @btn-background-hover;
-          }
-        }
-      }
-
-      div.description {
-        font-size: 11px;
-      }
-    }
-  }
+.index.content {
+  padding: 200px;
 }

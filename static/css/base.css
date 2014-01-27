@@ -7,6 +7,11 @@ body {
   color: #fbfaf9;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+body {
+  padding: 0;
+  margin: 0;
+  color: #fbfaf9;
+}
 div {
   margin: 0;
   padding: 0;
@@ -26,16 +31,7 @@ a {
 a:hover {
   color: #8bfffa;
 }
-body {
-  padding: 0;
-  margin: 0;
-  color: #fbfaf9;
-}
-body .contents-wrapper {
-  margin: 0 auto;
-  width: 960px;
-}
-body .btn {
+.btn {
   display: inline-block;
   padding: 12px 18px;
   background: #f17100;
@@ -67,56 +63,15 @@ body .btn {
   border: none;
   white-space: nowrap;
 }
-body .btn:hover {
+.btn:hover {
   background: #3a363a;
 }
-header#header {
-  height: 100%;
+button.btn {
+  background: #66aa11;
+  font-size: 15px;
+  cursor: pointer;
 }
-header#header div.top {
-  padding: 30px 0;
-}
-header#header div.top:after {
-  clear: both;
-}
-header#header div.top nav {
-  float: right;
-  display: inline;
-  font-size: 11px;
-}
-header#header div.top nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: inline;
-}
-header#header div.top nav ul li {
-  display: inline-block;
-  margin-left: 5px;
-}
-header#header div.top nav ul li a.menu {
-  padding: 5px 14px;
-}
-header#header div.content h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 70px;
-  line-height: 72px;
-}
-header#header div.content h2 {
-  margin: 10px 0 0;
-  padding: 0 0 0 310px;
-  font-size: 20px;
-  line-height: 20px;
-}
-header#header div.content form.register {
-  margin-top: 40px;
-}
-header#header div.content form.register div.input-wrapper {
-  display: inline-block;
-  position: relative;
-}
-header#header div.content form.register div.input-wrapper input {
+input {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -139,14 +94,63 @@ header#header div.content form.register div.input-wrapper input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-header#header div.content form.register div.input-wrapper button.btn {
-  background: #66aa11;
+div.contents-wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+div.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+header#header {
+  padding: 30px 0;
+  height: 40px;
+}
+header#header .logo {
+  float: left;
+  padding: 5px 14px;
+  margin-right: 60px;
+}
+header#header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+header#header nav ul li.menu-item {
+  float: left;
+  margin-left: 5px;
   font-size: 15px;
-  cursor: pointer;
+  padding: 5px 14px;
 }
-header#header div.content form.register div.input-wrapper button.btn:hover {
-  background: #3a363a;
+header#header nav.menu {
+  float: left;
 }
-header#header div.content form.register div.description {
+header#header nav.account-menu {
+  float: right;
+}
+header#header nav.account-menu .btn {
+  font-size: 12px;
+  padding: 6px;
+}
+div.content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 70px;
+  line-height: 72px;
+}
+div.content h2 {
+  margin: 10px 0 0;
+  padding: 0 0 0 310px;
+  font-size: 20px;
+  line-height: 20px;
+}
+div.content form.register {
+  margin-top: 40px;
+}
+div.content form.register div.description {
   font-size: 11px;
+}
+.index.content {
+  padding: 200px;
 }

@@ -1,7 +1,18 @@
 {% extends '_base.html' %}
 
 {% block body %}
-<div>
-    Wait!
+<div class="index content">
+    <div class="contents-wrapper">
+        <h1>Pycon@Korea</h1>
+        <h2>via Python Korea group</h2>
+            <div class="input-wrapper">
+                <button type="submit" class="btn">Register!</button>
+            </div>
+    </div>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.index.content').backstretch('/static/img/header-background.jpg');
+});
+</script>
 {% endblock %}
