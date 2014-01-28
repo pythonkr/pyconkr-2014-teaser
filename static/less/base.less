@@ -93,7 +93,7 @@ input {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  background: @text-color;
+//  background: @text-color;
   color: #444444;
   border: none;
   outline: none;
@@ -103,11 +103,12 @@ input {
   -webkit-background-clip: padding-box;
   -moz-border-radius: 3px;
   -moz-background-clip: padding;
+  border: 2px solid @text-color;
   border-radius: 3px;
   background-clip: padding-box;
-  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
