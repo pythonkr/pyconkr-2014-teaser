@@ -9,13 +9,12 @@ from account.forms import SiteUserCreationForm
 class SignupFormView(View):
     template_name = 'account/signup.html'
     signup_form = SiteUserCreationForm
-    ctx = {
-        'signup_form': signup_form
-    }
 
     def get(self, request):
         # TODO : login여부 확인
-        return render(request, self.template_name, self.ctx)
+        return render(request, self.template_name, {
+            'signup_form': self.signup_form
+        })
 
     def post(self, request):
         form = self.signup_form(request.POST)
@@ -28,20 +27,20 @@ class SignupFormView(View):
             login(request, user)
             return redirect('index')  # TODO : use 'next_url'
         else:
-            self.ctx['errors'] = form.errors
-            return render(request, self.template_name, self.ctx)
+            return render(request, self.template_name, {
+                'signup_form': form
+            })
 
 
 class LoginFormView(View):
     template_name = 'account/login.html'
     auth_form = AuthenticationForm
-    ctx = {
-        'auth_form': auth_form
-    }
 
     def get(self, request):
-        # TODO : login여부 확인
-        return render(request, self.template_name, self.ctx)
+        # TODO : login 여부 확인
+        return render(request, self.template_name, {
+            'auth_form': self.auth_form
+        })
 
     def post(self, request):
         form = self.auth_form(request, request.POST)
@@ -51,8 +50,9 @@ class LoginFormView(View):
             login(request, user)
             return redirect('index')
         else:
-            self.ctx['errors'] = form.errors
-            return render(request, self.template_name, self.ctx)
+            return render(request, self.template_name, {
+                'auth_form': form
+            })
 
 
 class LogoutView(View):

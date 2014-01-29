@@ -2,13 +2,11 @@
 
 {% block body %}
 <div class="contents-wrapper">
-    <div class="errors">
-
-    </div>
+??????
     <div class="form">
         <form method="post" action="{% url 'signup' %}">
             {% csrf_token %}
-            {{ signup_form }}
+            {% include '_fields.html' with form=signup_form %}
             <input class="btn" type="submit" value="Sign up" />
         </form>
     </div>
