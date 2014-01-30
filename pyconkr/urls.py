@@ -2,6 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from news.views import NewsListView, NewsDetailView
+from registration.views import RegistrationView
 from venue.views import VenueView
 
 admin.autodiscover()
@@ -17,9 +18,12 @@ urlpatterns = patterns('',
     url(r'^about/$', About.as_view(), name='about'),
 
     # account
-    url(r'^signup/$', SignupFormView.as_view(), name='signup'),
-    url(r'^login/$', LoginFormView.as_view(), name='login'),
-    url(r'^logout/$', LogoutView.as_view(), name='logout'),
+    url(r'^account/signup/$', SignupFormView.as_view(), name='signup'),
+    url(r'^account/login/$', LoginFormView.as_view(), name='login'),
+    url(r'^account/logout/$', LogoutView.as_view(), name='logout'),
+
+    # registration
+    url(r'^registration/', RegistrationView.as_view(), name='registration'),
 
     # sponsor
     url(r'^sponsors/$', SponsorListView.as_view(), name='sponsors'),

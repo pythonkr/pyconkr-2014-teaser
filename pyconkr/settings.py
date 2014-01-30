@@ -35,6 +35,7 @@ LOCAL_APPS = (
     'page',
     'pyconkr',
     'account',
+    'registration',
     'sponsor',
     'news',
     'venue',
