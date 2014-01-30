@@ -2,6 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from news.views import NewsListView, NewsDetailView
+from programs.views import ProgramsView
 from registration.views import RegistrationView
 from venue.views import VenueView
 
@@ -22,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^account/login/$', LoginFormView.as_view(), name='login'),
     url(r'^account/logout/$', LogoutView.as_view(), name='logout'),
 
+    url(r'^programs/', ProgramsView.as_view(), name='programs'),
     # registration
     url(r'^registration/', RegistrationView.as_view(), name='registration'),
 
