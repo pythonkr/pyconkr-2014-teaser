@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Django settings for pyconkr project.
 
@@ -100,6 +101,10 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+# Service (나중에 db로 옮겨질수도. 일단 개발 진행용.)
+REGISTRATION_OPEN = False
+
 
 # Call local_settings
 try:
