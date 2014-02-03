@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -16,6 +17,8 @@ class SiteUserManager(BaseUserManager):
 class SiteUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=50)
+    photo = models.ImageField(upload_to=settings.MEDIA_ROOT)
+    description = models.TextField()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [name]
