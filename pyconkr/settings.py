@@ -104,10 +104,3 @@ STATICFILES_FINDERS = (
 
 # Service (나중에 db로 옮겨질수도. 일단 개발 진행용.)
 REGISTRATION_OPEN = False
-
-
-# Call local_settings
-try:
-    from pyconkr.local_settings import *
-except ImportError, e:
-    pass
