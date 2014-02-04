@@ -13,6 +13,17 @@ class SiteUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+    def create_superuser(self, email, name, password, **kwargs ):
+        user = self.model(
+            email=email,
+            name=name,
+            is_staff=True,
+            is_superuser=True
+        )
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
 
 class SiteUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
@@ -21,7 +32,7 @@ class SiteUser(AbstractBaseUser, PermissionsMixin):
     description = models.TextField()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = [name]
+    REQUIRED_FIELDS = ['name']
 
     objects = SiteUserManager()
 
