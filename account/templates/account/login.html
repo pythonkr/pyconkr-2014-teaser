@@ -1,15 +1,15 @@
 {% extends '_base.html' %}
 
 {% block body %}
-<div>
+<div class="contents-wrapper">
     <div class="errors">
 
     </div>
     <div class="form">
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
-            {{ auth_form }}
-            <input type="submit" value="Login" />
+            {% include '_fields.html' with form=auth_form %}
+            <input class="btn" type="submit" value="Login" />
         </form>
     </div>
 </div>

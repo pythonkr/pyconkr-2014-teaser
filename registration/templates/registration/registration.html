@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block body %}
+<div class="contents-wrapper">
+    {% if registration_open %}
+    <div>
+        <a href="#_" class="btn disable">Register Event!</a>
+    </div>
+    {% else %}
+    <div>
+        <h1>아직 등록 기간이 아닙니다.</h1>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

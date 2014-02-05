@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -12,13 +13,26 @@ class SiteUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+    def create_superuser(self, email, name, password, **kwargs ):
+        user = self.model(
+            email=email,
+            name=name,
+            is_staff=True,
+            is_superuser=True
+        )
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
 
 class SiteUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=50)
+    photo = models.ImageField(upload_to=settings.MEDIA_ROOT)
+    description = models.TextField()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = [name]
+    REQUIRED_FIELDS = ['name']
 
     objects = SiteUserManager()
 
