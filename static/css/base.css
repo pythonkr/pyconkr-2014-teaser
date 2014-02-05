@@ -65,10 +65,14 @@ a:hover {
 .btn:hover {
   background: #3a363a;
 }
-button.btn {
+.btn.green {
   background: #66aa11;
   font-size: 15px;
   cursor: pointer;
+}
+.btn.green:hover {
+  color: #fbfaf9;
+  background: #3a363a;
 }
 input {
   font-family: inherit;
@@ -110,7 +114,7 @@ header#header {
 header#header .logo {
   float: left;
   padding: 5px 14px;
-  margin-right: 60px;
+  margin-right: 40px;
   color: #fbfaf9;
 }
 header#header nav ul {
@@ -123,7 +127,7 @@ header#header nav ul li.menu-item {
   float: left;
   margin-left: 5px;
   font-size: 15px;
-  padding: 5px 14px;
+  padding: 5px;
 }
 header#header nav ul li.menu-item a {
   color: #fbfaf9;
