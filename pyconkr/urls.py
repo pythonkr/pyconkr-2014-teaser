@@ -31,8 +31,7 @@ urlpatterns = patterns('',
     url(r'^sponsors/$', SponsorListView.as_view(), name='sponsors'),
 
     # news
-    url(r'^news/$', NewsListView.as_view(), name='news_list'),
-    url(r'^news/([0-9]+)/$', NewsDetailView.as_view(), name='news_detail'),
+    url(r'^news/', include('news.urls', app_name='news')),
     
     # venue
     url(r'^venue/$', VenueView.as_view(), name='venue'),
