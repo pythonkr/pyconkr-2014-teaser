@@ -104,6 +104,7 @@ STATICFILES_FINDERS = (
 
 # Service (나중에 db로 옮겨질수도. 일단 개발 진행용.)
 REGISTRATION_OPEN = False
+PROGRAMS_OPEN = False
 
 
 # Call local_settings
