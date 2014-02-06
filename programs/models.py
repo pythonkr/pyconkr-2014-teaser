@@ -1,22 +1,12 @@
-from django.conf import settings
 from django.db import models
 from account.models import SiteUser
-
-
-class Speaker(models.Model):
-    name = models.CharField(max_length=50)
-    photo = models.ImageField(upload_to=settings.MEDIA_ROOT, blank=True)
-    user = models.ForeignKey(SiteUser, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.name
 
 
 class Program(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
 
-    speaker = models.ForeignKey(Speaker)
+    speaker = models.ForeignKey(SiteUser)
 
     start = models.DateTimeField(blank=False)
     end = models.DateTimeField(blank=False)
