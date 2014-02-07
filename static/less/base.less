@@ -83,10 +83,15 @@ a {
   }
 }
 
-button.btn {
+.btn.green {
   background: #66aa11;
   font-size: 15px;
   cursor: pointer;
+
+  &:hover {
+    color: @text-color-light;
+    background: @btn-background-hover;
+  }
 }
 
 input {
@@ -132,7 +137,7 @@ header#header {
   .logo {
     float: left;
     padding: 5px 14px;
-    margin-right: 60px;
+    margin-right: 40px;
     color: #fbfaf9;
   }
   nav {
@@ -145,7 +150,7 @@ header#header {
         float: left;
         margin-left: 5px;
         font-size: 15px;
-        padding: 5px 14px;
+        padding: 5px;
         a {
           color: @text-color-light;
         }
