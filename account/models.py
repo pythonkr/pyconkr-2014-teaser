@@ -28,6 +28,7 @@ class SiteUserManager(BaseUserManager):
 class SiteUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=50)
+    is_speaker = models.BooleanField(default=False)
     photo = models.ImageField(upload_to=settings.MEDIA_ROOT)
     description = models.TextField()
 
