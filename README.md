@@ -9,6 +9,11 @@ PyConKr
 easy_install pip
 sudo pip install -r requirements.pip
 ```
+수행시에 다음과 같이 한다. ( db sync 작업 및 서버 구동 )
+```
+python manage.py syncdb --settings=settings.py
+python manage.py runserver --settings=settings.py
+```
 
 세팅 파일 변경하여 실행하는 방법
 -------------------------
