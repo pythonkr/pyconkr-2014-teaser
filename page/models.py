@@ -23,16 +23,6 @@ class SiteConfig(models.Model):
     # config_text = models.TextField(blank=True)
     config_datetime = models.DateTimeField(blank=True, null=True)
 
-    @property
-    def setting(self):
-        return {
-            self.TYPE_BOOLEAN: self.config_boolean,
-            self.TYPE_INTEGER: self.config_integer,
-            self.TYPE_STRING: self.config_varchar,
-            # self.TYPE_TEXT: self.config_text,
-            self.TYPE_DATETIME: self.config_datetime,
-        }.get(self.config_type, None)
-
 
 class SiteConfigManager(models.Manager):
     def get_value(self, name, default=None):
