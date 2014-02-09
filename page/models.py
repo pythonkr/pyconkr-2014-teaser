@@ -15,11 +15,12 @@ class SiteConfigManager(models.Manager):
                 return config.config_varchar
             elif config.config_datetime == SiteConfig.TYPE_DATETIME:
                 return config.config_datetime
+
         except SiteConfig.DoesNotExist as e:
             return default
 
     def set_value(self, name, value):
-        config, created = self.get_or_create()
+        config, created = self.get_or_create(title=name)
 
         config_type = type(value)
         if config_type == bool:
