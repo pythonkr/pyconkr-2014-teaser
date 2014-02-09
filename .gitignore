@@ -31,7 +31,7 @@ collected_static
 .idea/
 
 # autoenv:
-.env
+.env*
 
 # local settings
 local_settings.py*
