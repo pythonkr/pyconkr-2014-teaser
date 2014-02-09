@@ -17,3 +17,13 @@ class SiteConfig(models.Model):
     config_varchar = models.CharField(max_length=200, blank=True)
     config_text = models.TextField(blank=True)
     config_datetime = models.DateTimeField(blank=True, null=True)
+
+    @property
+    def setting(self):
+        return {
+            1: self.config_boolean,
+            2: self.config_integer,
+            3: self.config_varchar,
+            4: self.config_text,
+            5: self.config_datetime,
+        }.get(self.config_type, None)
