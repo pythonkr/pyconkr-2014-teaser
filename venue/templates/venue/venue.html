@@ -12,10 +12,35 @@
 {% block js %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript">
+var map;
+var eventLocation = {{ event_location|safe }};
+var restaurantList = {{ restaurant_list|safe }};
+var accommodationList = {{ accommodation_list|safe }};
+
+function addMarker(icon, latlng, info) {
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: icon
+    });
+    var infoWindow = new google.maps.InfoWindow(info);
+    google.maps.event.addListener(marker, 'click', function () {
+        infoWindow.open(map, marker);
+    });
+    return marker;
+}
+
 google.maps.event.addDomListener(window, 'load', function() {
-    new google.maps.Map(document.getElementById('map-canvas'), {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
-        center: new google.maps.LatLng(37.511235,127.059599)
+        center: eventLocation.latlng
+    });
+    addMarker('{{ STATIC_URL }}img/googlemap/marker/accommodation.png', eventLocation.latlng, eventLocation.info);
+    restaurantList.forEach(function (restaurant) {
+        addMarker('{{ STATIC_URL }}img/googlemap/marker/restaurant.png', restaurant.latlng, restaurant.info);
+    });
+    accommodationList.forEach(function (accommodation) {
+        addMarker('{{ STATIC_URL }}img/googlemap/marker/accommodation.png', accommodation.latlng, accommodation.info);
     });
 });
 </script>
