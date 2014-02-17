@@ -4,13 +4,13 @@ from django.db import models
 
 
 class Place(models.Model):
-    TYPE_TO_EAT = 100
-    TYPE_TO_SLEEP = 200
-
+    TYPE_RESTAURANT = 100
+    TYPE_ACCOMMODATION = 200
     TYPES = (
-        (TYPE_TO_EAT, 'Place to Eat'),
-        (TYPE_TO_SLEEP, 'Place to Sleep'),
+        (TYPE_RESTAURANT, 'Place to Eat'),
+        (TYPE_ACCOMMODATION, 'Place to Sleep'),
     )
+
     type = models.IntegerField(choices=TYPES)
     coord_lat = models.FloatField()
     coord_long = models.FloatField()
