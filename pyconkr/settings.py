@@ -25,8 +25,6 @@ LOCAL_APPS = (
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
-AUTH_USER_MODEL = 'account.SiteUser'
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
