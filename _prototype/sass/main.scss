@@ -1,0 +1,15 @@
+@charset "utf-8";
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Reset
+@import "normalize";
+
+@import "utilities";
+
+body {
+	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', Apple Gothic, dotum, '돋움', sans-serif;
+	color: #333;
+	background-color: #fff;
+}

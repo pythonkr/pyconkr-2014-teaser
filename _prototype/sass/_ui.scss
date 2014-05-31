@@ -1,0 +1,368 @@
+.ico {
+	display: inline-block;
+}
+
+.mb-5 {
+	margin-bottom: 5px;
+}
+
+.logo {
+	margin: 0;
+	line-height: 25px;
+	padding: 12px 0 10px;
+	border-bottom: 1px solid #d8d8d8;
+	
+	.ico {
+		@include spr(66px,27px);
+		margin: -2px 6px 0 0;
+		vertical-align: top;
+	}
+
+	b {
+		color: #d7191e;
+	}
+}
+
+.about-yogiyo {
+	padding: 13px 0 0;
+	list-style: none;
+	letter-spacing: -1px;
+
+	li {
+		margin-bottom: 23px;
+
+		&.thumb {
+			position: relative;
+			padding-left: 130px;
+			min-height: 78px;
+
+			.img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding-left: 0;
+			}
+
+			strong {
+				display: inline;
+				font-size: 14px;
+				color: #000;
+			}
+
+			b {
+				color: #d7191e;
+			}
+		}
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 5px;
+		font-size: 15px;
+		color: #d7191e;
+	}
+
+	p {
+		padding-left: 12px;
+	}
+
+	.ico {
+		margin-right: 6px;
+		@include spr(5px,5px);
+		background-position: -69px 0;
+		margin-top: -3px;
+	}
+}
+
+.tos-wrapper, .bx-wrapper {
+	margin: 14px 0;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+.tos-wrapper {
+	.logo {
+		padding-top: 0;
+
+		.ico {
+			display: block;
+			width: 22px;
+			height: 9px;
+			margin-bottom: 2px;
+			background-size: 85px 92px;
+		}
+	}
+}
+
+.bx-wrapper {
+	h1 {
+		margin: 0 0 10px;
+		padding: 4px 0 6px;
+		color: #d41d26;
+		border-bottom: 1px solid #ccc;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 8px;
+		font-size: 15px;
+		color: #000;
+	}
+
+	li {
+		p {
+			padding-left: 30px;
+			text-align: left;
+		}
+	}
+
+	b {
+		font-weight: normal;
+		color: #d41d26;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	.ico {
+		display: inline-block;
+		width: 11px;
+		height: 10px;
+		margin: -2px 3px 0 0;
+		vertical-align: middle;
+		background: url(../images/join3.png) no-repeat 0 0;
+		background-size: 11px 10px;
+	}
+
+	.media-wrapper {
+		width: 641px;
+		padding: 7px;
+		margin: 0 auto 13px;
+		text-align: center;
+		background: #e2e2e2;
+		border-radius: 6px;
+		@include box-shadow(2px 2px 1px #c4c4c4);
+
+		@media (max-width: 676px) {
+			width: 100%;
+
+		    img {
+		    	width: 100%;
+		    	height: auto;
+		    }
+		}
+	}
+
+	.img {
+		text-align: center;
+
+		@media (max-width: 625px) {
+		    img {
+		    	width: 100%;
+		    	height: auto;
+		    }
+		}
+	}
+
+	p.mb-20 {
+		margin-bottom: 20px;
+	}
+}
+
+#yogiyo_AD2 {
+	display: none;
+}
+
+#terms {
+	padding-top: 20px;
+
+	p {
+		margin: 0 0 21px;
+	}
+
+	h2 {
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	.d-list {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul, ol {
+		margin: 0 0 10px;
+		padding-left: 20px;
+		line-height: 1.5;
+	}
+
+	ul ul {
+		margin-top: 5px;
+	}
+
+	.index-list li {
+		margin-bottom: 0;
+	}
+
+	li {
+		margin-bottom: 5px;
+
+		i {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-style: normal;
+		}
+	}
+
+	a:link, a:focus, a:hover {
+		color: #333;
+	}
+}
+
+.tab-nav {
+	margin: 18px 0 15px;
+	padding: 0;
+	list-style: none;
+	@include clearfix();
+
+	li {
+		float: left;
+		width: 33%;
+		padding: 0 5px;
+		margin-bottom: 6px;
+
+		&:nth-child(3n), &:nth-child(3n-2) {
+			padding: 0;
+		}
+
+		&:nth-child(3n-1) {
+			width: 34%;
+		}
+	}
+
+	a {
+		display: block;
+		height: 37px;
+		line-height: 36px;
+		text-align: center;
+		font-size: 18px;
+		color: #d7191e;
+		border: 1px solid #d7191e;
+		border-radius: 4px;
+
+		@media (max-width: $screen-xs) {
+			font-size: 16px;
+		}
+
+		@media (max-width: 320px) {
+			font-size: 13px;
+		}
+
+		&.active, &:hover, &:active, &:focus {
+			text-decoration: none;
+			background: #d7191e;
+			color: #fff;
+		}
+	}
+}
+
+.faq {
+	line-height: 16px;
+
+	.ico {
+		@include spr(7px,16px);
+		background-position: -76px 2px;
+		margin: -1px 5px 0 0;
+	}
+}
+
+#top5 {
+	display: block;
+
+	.faq-content {
+		display: block;
+	}
+}
+
+.faq-content {
+	display: none;
+	position: relative;
+
+	.question {
+		display: block;
+		position: relative;
+		padding: 15px 40px 13px 30px;
+		font-size: 15px;
+		cursor: pointer;
+		z-index: 20;
+		background-color: #f8f8f8;
+		border: 1px solid #cbcbcb;
+		color: #000;
+
+		.q {
+			@include spr(17px,15px);
+			background-position: -85px 0;
+			top: 20px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			@include spr(22px,12px);
+			background-position: -69px -15px; 
+			right: 13px;
+			top: 19px;
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+
+	.answer {
+		position: relative;
+		margin-top: -1px;
+		height: 0;
+		overflow: hidden;
+		color: #6c6c6c;
+		background-color: #fff;
+
+		p {
+			padding: 17px 9px 13px 34px;
+		}
+
+		.a {
+			top: 22px;
+			@include spr(22px,12px);
+			background-position: -102px 0; 
+		}
+	}
+
+	.open {
+		+ .answer {
+			height: auto;
+			max-height: 400px;
+		}
+	}
+}
+
+.q, .a {
+	display: block;
+	position: absolute;
+	left: 9px;
+	width: 18px;
+	height: 15px;
+	text-indent: -9999px;
+	background: url(../images/sp_icon.png) no-repeat 0 0;
+	background-size: 46px 82px;
+}
