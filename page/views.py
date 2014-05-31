@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.views.generic import TemplateView
+
 from pyconkr.models import Program, Sponsor, Speaker
 
 
@@ -10,4 +12,5 @@ class Home(TemplateView):
         context['programs'] = Program.objects.all()
         context['sponsors'] = Sponsor.objects.all()
         context['speakers'] = Speaker.objects.all()
+        context['CACHE_TIMEOUT'] = settings.TEMPLATE_CACHE_TIMEOUT
         return context
