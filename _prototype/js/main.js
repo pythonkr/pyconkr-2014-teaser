@@ -21,8 +21,8 @@ var pyconKr = (function($) {
         // google maps
         google.maps.event.addDomListener(window, 'load', function() {
             eventLocationMarker = new google.maps.Marker({
-                // 잠실 롯데호텔월드
-                position: new google.maps.LatLng(37.511453, 127.100181)
+                // 숙명여대
+                position: new google.maps.LatLng(37.546171, 126.964662)
             });
             map = new google.maps.Map(document.getElementById('map-canvas'), {
                 zoom: 15,
