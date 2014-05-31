@@ -141,7 +141,7 @@ section {
 		}
 	}
 
-	.register {
+	.register, .cfp {
 		display: inline-block;
 		@include size(252px, 65px);
 		padding-top: 11px;
@@ -158,6 +158,10 @@ section {
 			font-weight: normal;
 		}
 	}
+
+    .cfp {
+      background: #fff304;
+    }
 }
 
 #countdown {
@@ -376,6 +380,7 @@ section {
 			font-size: 20px;
 		}
 	}
+
 	#map-canvas {
 		width: 100%;
 		height: 400px;
