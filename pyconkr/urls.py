@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', Home.as_view(), name='home'),
     # admin
     url(r'^admin/', include(admin.site.urls)),
+    (r'^summernote/', include('django_summernote.urls')),
 )
 
 # static files (for app)

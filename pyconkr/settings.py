@@ -22,6 +22,7 @@ DJANGO_APPS = (
 LOCAL_APPS = (
     'page',
     'pyconkr',
+    'django_summernote',
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
@@ -78,7 +79,3 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
-# Service (나중에 db로 옮겨질수도. 일단 개발 진행용.)
-REGISTRATION_OPEN = False
-PROGRAMS_OPEN = False
