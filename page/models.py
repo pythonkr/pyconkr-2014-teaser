@@ -34,7 +34,7 @@ class SiteConfigManager(models.Manager):
             config.config_varchar = value
         elif config_type == datetime:
             config.config_type = SiteConfig.TYPE_DATETIME
-            config.config_varchar = value
+            config.config_datetime = value
         else:
             raise ValueError(u'Not Supported Type')
 
