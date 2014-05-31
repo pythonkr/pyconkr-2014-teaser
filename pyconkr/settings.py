@@ -88,3 +88,7 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'cache'),
     }
 }
+
+IMAGE_SIZES = {
+    'speaker' : [300,300],
+}

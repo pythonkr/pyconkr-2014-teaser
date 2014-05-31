@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
+from PIL import Image
+from django.conf import settings
 from django.db import models
 from pyconkr.lib import CacheDeleteMixin
 
@@ -14,6 +16,16 @@ class Speaker(CacheDeleteMixin, models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        super(Speaker, self).save(*args, **kwargs)
+        image = Image.open(self.picture.path)
+        speaker_picture_size = settings.IMAGE_SIZES['speaker']
+        width, height = image.size
+        if width > speaker_picture_size[0]:
+            image.thumbnail(settings.IMAGE_SIZES['speaker'], Image.ANTIALIAS)
+            image.save(self.picture.path)
+        del image
 
 
 class Program(CacheDeleteMixin, models.Model):
