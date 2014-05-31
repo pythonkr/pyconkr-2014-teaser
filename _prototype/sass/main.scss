@@ -328,4 +328,18 @@ section {
 	}
 }
 
+#footer {
+	padding: 50px;
+	color: #fff;
+	background-color: #20314d;
+	text-align: center;
+	img {
+		margin: 0 auto;
+	}
+	p {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+}
+
 @import "responsive-utilities";
