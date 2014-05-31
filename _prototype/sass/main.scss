@@ -12,4 +12,16 @@ body {
 	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', Apple Gothic, dotum, '돋움', sans-serif;
 	color: #333;
 	background-color: #fff;
+    .wrapper {
+        #program {
+            .chain {
+                width: 30px;
+                height: 30px;
+                background-color: #312105;
+                border-radius: 15px;
+                content: '';
+            }
+            background-color: #312105;
+        }
+    }
 }
