@@ -40,6 +40,7 @@
 
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
   @include responsive-visibility('.visible-md');
+
 }
 
 @include responsive-invisibility('.visible-lg');
@@ -50,6 +51,34 @@
 
 @media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.hidden-xs');
+  #nav, .utils { display: none; }
+  #header .m-menu, .active #nav { display: block; }
+  #nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      float: none;
+      border-bottom: 1px solid #333;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .active #main {
+    margin-top: 270px;
+  }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
