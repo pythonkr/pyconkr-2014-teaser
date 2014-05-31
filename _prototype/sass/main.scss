@@ -25,16 +25,20 @@ a:hover, a:active {
 }
 
 #header {
-	position: relative;
-	height: 122px;
-}
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	top: 0;
+	background: #fff;
+	z-index: 10;
 
-h1 {
-	position: absolute;
-	top: 11px;
-	left: 50%;
-	margin: 0 0 0 -87px;
-	@include spr(174px, 100px);
+	h1 {
+		position: absolute;
+		top: 11px;
+		left: 50%;
+		margin: 0 0 0 -87px;
+		@include spr(174px, 100px);
+	}
 }
 
 h2 {
@@ -59,7 +63,7 @@ section {
 	float: left;
 
 	ul {
-		margin: 19px 0 0;
+		margin: 20px 0 0;
 		@include clearfix();
 	}
 
@@ -79,7 +83,7 @@ section {
 
 .utils {
 	float: right;
-	padding-top: 19px;
+	padding-top: 25px;
 
 	a {
 		display: inline-block;
@@ -115,10 +119,58 @@ section {
 	@include box-sizing(border-box);
 }
 
+#main {
+	height: 250px;
+	margin-top: 80px;
+	background: url(../images/bg.jpg) no-repeat top center;
+	background-size: cover;
+
+	h1 {
+		font-size: 26px;
+		color: #fff;
+		text-shadow: 0 0 3px rgba(0,0,0,.8);
+
+		span {
+			display: block;
+			font-size: 15px;
+		}
+
+		b {
+			color: #fef204;
+		}
+	}
+
+	.register {
+		display: inline-block;
+		@include size(252px, 65px);
+		padding-top: 11px;
+		font-weight: bold;
+		font-size: 22px;
+		text-decoration: none;
+		background: #fff304;
+		color: #312105;
+		border-radius: 4px;
+
+		span {
+			display: block;
+			font-size: 13px;
+			font-weight: normal;
+		}
+	}
+}
+
+#countdown {
+	margin: 0 auto 24px;
+	@include spr(199px, 80px);
+	display: block;
+	background-position: 0 -190px
+}
+
 #about {
 	text-align: center;
 	font-size: 14px;
 	color: #312105;
+	background: #f7f7f7;
 
 	h2 {
 		color: #6b89f0;
