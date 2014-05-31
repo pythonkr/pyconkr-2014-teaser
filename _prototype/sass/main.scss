@@ -240,10 +240,11 @@ section {
 			text-align: left;
 			.thread {
 				position: absolute;
-				left: 113px;
-				width: 13px;
+				left: 115px;
+				width: 10px;
 				height: 100%;
 				background-color: #dedede;
+				border-radius: 5px;
 			}
 			li {
 				height: 70px;
@@ -359,6 +360,38 @@ section {
 		top: 0;
 		left: 0;
 		z-index: 5;
+	}
+}
+
+#venue {
+	padding-bottom: 0;
+	background-color: #fff;
+	.wrapper {
+		h2 {
+			color: #000;
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	#map-canvas {
+		width: 100%;
+		height: 400px;
+	}
+}
+
+#footer {
+	padding: 50px;
+	color: #fff;
+	background-color: #20314d;
+	text-align: center;
+	img {
+		margin: 0 auto;
+	}
+	p {
+		margin: 0 auto;
+		margin-top: 10px;
 	}
 }
 
