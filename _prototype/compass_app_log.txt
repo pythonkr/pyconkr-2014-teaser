@@ -153,3 +153,31 @@
 2014-05-31 17:28:53 overwrite css/main.css 
 2014-05-31 17:28:55 identical css/main.css 
 2014-05-31 17:29:42 overwrite css/main.css 
+2014-05-31 17:30:48 overwrite css/main.css 
+2014-05-31 17:32:19     error sass/main.scss (Line 234: Invalid CSS after "	background: ": expected expression (e.g. 1px, bold), was "#speaker;")
+2014-05-31 17:32:19 overwrite css/main.css 
+2014-05-31 17:32:59 overwrite css/main.css 
+2014-05-31 17:36:34 overwrite css/main.css 
+2014-05-31 17:37:03 overwrite css/main.css 
+2014-05-31 17:37:41 overwrite css/main.css 
+2014-05-31 17:38:05 overwrite css/main.css 
+2014-05-31 17:38:19 overwrite css/main.css 
+2014-05-31 17:38:29 overwrite css/main.css 
+2014-05-31 17:38:40 overwrite css/main.css 
+2014-05-31 17:39:00 overwrite css/main.css 
+2014-05-31 17:43:00 overwrite css/main.css 
+2014-05-31 17:43:34     error sass/main.scss (Line 255: Invalid CSS after "...ze(160px, 177px": expected ")", was ";)")
+2014-05-31 17:43:34 overwrite css/main.css 
+2014-05-31 17:43:35     error sass/main.scss (Line 255: Invalid CSS after "...ze(160px, 177px": expected ")", was ";)")
+2014-05-31 17:43:35 identical css/main.css 
+2014-05-31 17:43:44 overwrite css/main.css 
+2014-05-31 17:44:03 overwrite css/main.css 
+2014-05-31 17:44:26 overwrite css/main.css 
+2014-05-31 17:45:30 overwrite css/main.css 
+2014-05-31 17:48:23 overwrite css/main.css 
+2014-05-31 17:48:49 overwrite css/main.css 
+2014-05-31 17:50:56 overwrite css/main.css 
+2014-05-31 17:52:48 identical css/main.css 
+2014-05-31 17:53:26 overwrite css/main.css 
+2014-05-31 17:54:56 overwrite css/main.css 
+2014-05-31 17:55:14 overwrite css/main.css 

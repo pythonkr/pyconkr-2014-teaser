@@ -111,6 +111,10 @@ section {
 	}
 }
 
+#about *, #speaker *, #partner * {
+	@include box-sizing(border-box);
+}
+
 #about {
 	text-align: center;
 	font-size: 14px;
@@ -134,7 +138,6 @@ section {
 	li {
 		display: inline-block;
 		padding-bottom: 15px;
-		@include box-sizing(border-box);
 	}
 
 	p {
@@ -226,6 +229,56 @@ section {
 	li {
 		text-align: center;
 		list-style: none;
-		@include box-sizing(border-box);
 	}
 }
+
+#speaker {
+	background: #6b89f0;
+
+	h2 {
+		color: #fff;
+	}
+
+	li {
+		position: relative;
+		padding: 0 0 0 200px;
+		margin: 0 0 10px;
+		text-align: left;
+		list-style: none;
+		height: 180px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.thumb {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		@include size(160px, 177px);
+	}
+
+	.name {
+		font-size: 15px;
+		font-weight: bold;
+		color: #fff;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			text-transform: none;
+			color: #fff304;
+		}
+	}
+
+	.frame {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+}
+
+@import "responsive-utilities";
