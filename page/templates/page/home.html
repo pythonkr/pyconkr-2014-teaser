@@ -1,3 +1,229 @@
+<!doctype html>{% load compress %}
+<!--[if IE 7]>
+<html class="ie ie7" lang="ko">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="ko">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html class="no-js" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pycon Korea</title>
+    <meta name="description" content="파이콘 코리아">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+    <meta property="og:title" content="파이콘 코리아">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:site_name" content="파이콘 코리아">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="파이콘 코리아">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-l.png" media="screen and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-s.png" media="screen and (-webkit-device-pixel-ratio: 1.5)">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-l.png">
+    {% compress css %}
+    <link type="text/x-sass" rel="stylesheet" href="/static/css/sass/main.scss" charset="utf-8">
+    {% endcompress %}
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/static/css/main_ie.css"><![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="header">
+        <div class="container-fluid">
+            <h1>파이콘 코리아</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#about" data-scroll="about">about</a></li>
+                    <li><a href="#program" data-scroll="program">program</a></li>
+                    <li><a href="#speaker" data-scroll="speaker">speaker</a></li>
+                    <li><a href="#partner" data-scroll="partner">partner</a></li>
+                    <li><a href="#venue" data-scroll="venue">venue</a></li>
+                </ul>
+            </nav>
+
+            <div class="utils">
+                <a href="#" class="fb">facebook</a>
+                <a href="#" class="twitter">twitter</a>
+                <a href="#" class="register">register</a>
+            </div>
+            <a href="#" class="m-menu" id="m-menu"><span>≡</span> Menu</a>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container-fluid">
+            <h1>파이썬 코리아 컨퍼런스 2014<span>PYCON KOREA <b>MAY 9TH - 13TH</b> in Seoul</span></h1>
+
+            <a class="register">REGISTER NOW<span>please register for more information</span></a>
+        </div>
+    </section>
+    
+    <section id="about" data-anchor="about">
+        <div class="container-fluid">
+            <h2>About</h2>
+            <h3>The Korea Python Community Conference</h3>
+            <p class="date">24 May 2014, Seoul</p>
+            <p class="txt">행사의 목표는 공유와 기술 그리고 성장입니다. 참여하고 소통하는 개발자 행사입니다.<br>
+            일반적인 강의 위주 콘퍼런스 형식을 완전히 탈피하여<br>
+            만남, 나눔, 공감, 즐거움을 느낄 수 있는 IT인들의 축제입니다.</p>
+            <ul class="row">
+                <li class="col-md-4">
+                    <i class="ico ico-1"></i>
+                    <strong>The Vision</strong>
+                    지식을 나누고,탁월함을 추구하며,<br>
+                    함께 성장하는 컨퍼런스 입니다.
+                </li>
+                <li class="col-md-4">
+                    <i class="ico ico-2"></i>
+                    <strong>Meetings</strong>
+                    더 다양한 주제로 풍성해진 python korea,<br>
+                    이틀동안 진행됩니다.
+                </li>
+                <li class="col-md-4">
+                    <i class="ico ico-3"></i>
+                    <strong>Workshops</strong>
+                    국내외 IT기업의 개발자들이<br>
+                    수준높은 컨텐츠를 준비했습니다.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="program" data-anchor="program">
+        <div class="wrapper">
+            <h2>PROGRAM</h2>
+            <ul>
+                <div class="thread"></div>
+                <li>
+                    <span class="time">9:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Registration</span>
+                    <span class="author">Ari Lacenski</span>
+                </li>
+                <li>
+                    <span class="time">10:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Keynote</span>
+                    <span class="author">Max Thayer</span>
+                </li>
+                <li>
+                    <span class="time">11:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Android: The Land that Python Forgot?</span>
+                    <span class="author">Juan Lavista Ferres</span>
+                </li>
+                <li>
+                    <span class="time">12:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Notable Features of Python</span>
+                    <span class="author">Kamal Marhubi</span>
+                </li>
+                <li>
+                    <span class="time">13:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Notable Features of Python</span>
+                    <span class="author">Kamal Marhubi</span>
+                </li>
+                <li>
+                    <span class="time">14:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Notable Features of Python</span>
+                    <span class="author">Kamal Marhubi</span>
+                </li>
+                <li>
+                    <span class="time">15:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Notable Features of Python</span>
+                    <span class="author">Kamal Marhubi</span>
+                </li>
+                <li>
+                    <span class="time">16:00</span>
+                    <div class="chain"></div>
+                    <span class="title">Notable Features of Python</span>
+                    <span class="author">Kamal Marhubi</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="speaker" data-anchor="speaker">
+        <div class="container-fluid">
+            <h2>speakers</h2>
+            <ul class="row">
+                <li class="col-md-12">
+                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
+                    <p class="name">
+                        <span class="tech">Python</span>
+                        james powell
+                    </p>
+                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
+                </li>
+                <li>
+                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
+                    <p class="name">
+                        <span class="tech">Python</span>
+                        james powell
+                    </p>
+                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
+                </li>
+                <li>
+                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
+                    <p class="name">
+                        <span class="tech">Python</span>
+                        james powell
+                    </p>
+                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="partner" data-anchor="partner">
+        <div class="container-fluid">
+            <h2>partners</h2>
+            <p class="txt">thanks for support goes to</p>
+            <ul class="row">
+                <li class="col-md-2"><img src="/static/img/dummy-partner1.png" alt=""></li>
+                <li class="col-md-2"><img src="/static/img/dummy-partner2.png" alt=""></li>
+                <li class="col-md-2"><img src="/static/img/dummy-partner3.png" alt=""></li>
+                <li class="col-md-2"><img src="/static/img/dummy-partner4.png" alt=""></li>
+                <li class="col-md-2"><img src="/static/img/dummy-partner5.png" alt=""></li>
+                <li class="col-md-2"><img src="/static/img/dummy-partner6.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="venue" data-anchor="venue">
+        <div class="wrapper">
+            <h2>VENUE</h2>
+            <p>숙명여대 창학 B107호 젬마홀</p>
+        </div>
+        <div id="map-canvas"></div>
+    </section>
+
+    <footer id="footer">
+        <img src="/static/img/footer-logo.png">
+        <p>Copyright ©Python Korea.All rights Reserved.</p>
+    </footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.1.min.js"><\/script>')</script>
+{% compress js %}
+<script src="/static/js/main.js"></script>
+{% endcompress %}
+</body>
+</html>
+{% comment %}
 {% extends 'base.html' %}
 {% load cache %}
 {% block contents %}
@@ -27,3 +253,4 @@
         {% include 'page/_venue.html' %}
     </section>
 {% endblock %}
+{% endcomment %}
