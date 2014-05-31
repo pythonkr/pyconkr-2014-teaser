@@ -310,4 +310,22 @@ section {
 	}
 }
 
+#venue {
+	padding-bottom: 0;
+	background-color: #fff;
+	.wrapper {
+		h2 {
+			color: #000;
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	#map-canvas {
+		width: 100%;
+		height: 400px;
+	}
+}
+
 @import "responsive-utilities";
