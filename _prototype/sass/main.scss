@@ -37,7 +37,20 @@ a:hover, a:active {
 		top: 11px;
 		left: 50%;
 		margin: 0 0 0 -87px;
+		z-index: 10;
 		@include spr(174px, 100px);
+	}
+
+	.m-menu {
+		display: none;
+		position: absolute;
+		z-index: 3;
+		border: 1px solid #333;
+		top: 1.6em;
+		right: 1.6em;
+		padding: 0.4em 0.7em;
+		border-radius: 4px;
+		text-decoration: none;
 	}
 }
 

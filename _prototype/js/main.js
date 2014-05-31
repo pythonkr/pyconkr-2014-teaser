@@ -3,6 +3,7 @@ var pyconKr = (function($) {
 		$window = $(window),
 		doc = document,
 		$link = $('#nav').find('a'),
+        $mMenu = $('#m-menu'),
         scrollAnchor, scrollPoint,
         map, eventLocationMarker;
 
@@ -15,6 +16,11 @@ var pyconKr = (function($) {
                 scrollTop: scrollPoint
             }, 500);
 
+            return false;
+        });
+
+        $mMenu.on('click', function() {
+            $body.toggleClass('active');
             return false;
         });
 
