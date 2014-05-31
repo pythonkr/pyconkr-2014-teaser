@@ -924,4 +924,5 @@
   background: url(../images/sp.png) no-repeat;
   background-repeat: no-repeat;
   background-size: 250px 270px;
+  @include hide-text();
 }

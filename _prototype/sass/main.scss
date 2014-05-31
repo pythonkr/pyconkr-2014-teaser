@@ -2,6 +2,7 @@
 // Core variables and mixins
 @import "variables";
 @import "mixins";
+@import "grid";
 
 // Reset
 @import "normalize";
@@ -9,7 +10,178 @@
 @import "utilities";
 
 body {
-	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', Apple Gothic, dotum, '돋움', sans-serif;
+	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', '나눔고딕', NanumGothic, Apple Gothic, dotum, '돋움', sans-serif;
 	color: #333;
 	background-color: #fff;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+#header {
+	position: relative;
+	height: 122px;
+}
+
+h1 {
+	position: absolute;
+	top: 11px;
+	left: 50%;
+	margin: 0 0 0 -87px;
+	@include spr(174px, 100px);
+}
+
+h2 {
+	margin: 0 0 20px;
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+#nav {
+	float: left;
+
+	ul {
+		margin: 19px 0 0;
+		@include clearfix();
+	}
+
+	li {
+		float: left;
+		list-style: none;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	a {
+		display: inline-block;
+		padding: 9px;
+		text-decoration: none;
+	}
+}
+
+.utils {
+	float: right;
+	padding-top: 19px;
+
+	a {
+		display: inline-block;
+		padding: 0 2px;
+		text-align: center;
+		vertical-align: middle;
+
+		&.register {
+			height: 30px;
+			padding: 0 10px;
+			margin-left: 4px;
+			line-height: 28px;
+			background: #6b89f0;
+			color: #fff;
+			border-radius: 4px;
+		}
+
+		&.fb, &.twitter {
+			@include spr(24px, 28px);
+		}
+
+		&.fb {
+			background-position: -185px 0;
+		}
+
+		&.twitter {
+			background-position: -219px 0;
+		}
+	}
+}
+
+#about {
+	text-align: center;
+	font-size: 14px;
+	color: #312105;
+
+	h2 {
+		color: #6b89f0;
+	}
+
+	h3, strong {
+		margin: 0 0 15px;
+		font-size: 30px;
+	}
+
+	.date {
+		font-size: 20px;
+		color: #312105;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	p {
+		margin: 0 0 15px;
+
+		&.txt {
+			margin-bottom: 20px;
+		}
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 14px;
+		font-size: 20px;
+	}
+
+	.ico {
+		margin-bottom: 10px;
+		@include spr(79px, 85px);
+	}
+
+	.ico-1 {
+		background-position: 0 -108px;
+	}
+
+	.ico-2 {
+		background-position: -81px -108px;
+	}
+
+	.ico-3 {
+		background-position: -165px -108px;
+	}
+}
+
+#partner {
+	background: #fff755;
+
+	h2 {
+		margin-bottom: 5px;
+		color: #312105;
+	}
+
+	.txt {
+		margin: 0 0 10px;
+		font-size: 16px;
+		color: #312105;
+	}
+
+	li {
+		text-align: center;
+		list-style: none;
+	}
 }
