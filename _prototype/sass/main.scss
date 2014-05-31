@@ -330,7 +330,8 @@ section {
     }
 
     .request {
-        .email {
+        .email a {
+            color: #dedede;
             font-size: 30px;
             font-weight: bold;
         }
