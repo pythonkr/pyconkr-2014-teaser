@@ -166,7 +166,11 @@ section {
 	}
 }
 
-#program .wrapper {
+#program {
+	h2 {
+		margin-bottom: 50px;
+		color: #fff304;
+	}
 	.time {
 		font-size: 22px;
 		color: #fff;
