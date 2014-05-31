@@ -136,3 +136,6 @@
 2014-05-31 17:05:02 overwrite css/main.css 
 2014-05-31 17:05:14 overwrite css/main.css 
 2014-05-31 17:06:21 overwrite css/main.css 
+2014-05-31 17:07:43     error sass/main.scss (Line 13: Invalid CSS after "body {": expected "}", was "<<<<<<< HEAD")
+2014-05-31 17:07:43 overwrite css/main.css 
+2014-05-31 17:08:16 overwrite css/main.css 

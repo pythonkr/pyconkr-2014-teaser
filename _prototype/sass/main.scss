@@ -10,9 +10,48 @@
 @import "utilities";
 
 body {
-	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', '나눔고딕', NanumGothic, Apple Gothic, dotum, '돋움', sans-serif;
-	color: #333;
-	background-color: #fff;
+    font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', Apple Gothic, dotum, '돋움', sans-serif;
+    color: #333;
+    background-color: #fff;
+    #program .wrapper {
+        .time {
+            font-size: 22px;
+            color: #fff;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .author {
+            font-size: 16px;
+            font-weight: light;
+            color: #fff;
+        }
+        .chain {
+            display: inline-block;
+            position: relative;
+            content: ' ';
+            width: 22px;
+            height: 22px;
+            border: 5px solid #fff;
+            border-radius: 20px;
+            &:before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 12px;
+                height: 12px;
+                background-color: #312105;
+                border: 5px solid #6b89f0;
+                border-radius: 15px;
+                content: ' ';
+            }
+        }
+        background-color: #312105;
+    }
 }
 
 a {
