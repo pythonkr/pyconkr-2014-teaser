@@ -188,10 +188,11 @@ section {
 			text-align: left;
 			.thread {
 				position: absolute;
-				left: 113px;
-				width: 13px;
+				left: 115px;
+				width: 10px;
 				height: 100%;
 				background-color: #dedede;
+				border-radius: 5px;
 			}
 			li {
 				height: 70px;
