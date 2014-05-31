@@ -1,7 +1,0 @@
-{% for field in form %}
-    <div class="fields">
-        {{ field.label_tag }}
-        {{ field }}
-        <div class="field-errors">{{ field.errors.as_text }}</div>
-    </div>
-{% endfor %}

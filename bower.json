@@ -1,0 +1,8 @@
+{
+    "name": "pyconkr",
+    "dependencies": {
+        "jquery": "~2.1.0",
+        "jquery-ui": "~1.10.4",
+        "html5shiv": "~3.7.0"
+    }
+}

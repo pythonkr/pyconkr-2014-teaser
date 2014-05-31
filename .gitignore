@@ -29,6 +29,9 @@ build
 media
 collected_static
 
+# file cache
+cache
+
 # pyCharm
 .idea/
 
