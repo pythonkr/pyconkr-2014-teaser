@@ -123,6 +123,7 @@ section {
 	h3, strong {
 		margin: 0 0 15px;
 		font-size: 30px;
+		line-height: 1.3;
 	}
 
 	.date {
@@ -132,13 +133,15 @@ section {
 
 	li {
 		display: inline-block;
+		padding-bottom: 15px;
+		@include box-sizing(border-box);
 	}
 
 	p {
 		margin: 0 0 15px;
 
 		&.txt {
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 	}
 
@@ -252,5 +255,6 @@ section {
 	li {
 		text-align: center;
 		list-style: none;
+		@include box-sizing(border-box);
 	}
 }

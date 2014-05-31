@@ -44,9 +44,5 @@ class SiteUser(AbstractBaseUser, PermissionsMixin):
     def is_staff(self):
         return self.is_superuser
 
-    @property
-    def is_speaker(self):
-        return self.is_speaker
-
     def __unicode__(self):
         return self.name
