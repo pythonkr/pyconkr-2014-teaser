@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load cache %}
+{% block contents %}
+    <section id="about" class="act">
+        {% include 'page/_about.html' %}
+    </section>
+
+    {% cache CACHE_TIMEOUT programs %}
+    <section id="programs" class="act">
+        {% include 'page/_programs.html' %}
+    </section>
+    {% endcache %}
+
+    {% cache CACHE_TIMEOUT speakers %}
+    <section id="speakers" class="act">
+        {% include 'page/_speakers.html' %}
+    </section>
+    {% endcache %}
+
+    {% cache CACHE_TIMEOUT sponsors %}
+    <section id="sponsors" class="act">
+        {% include 'page/_sponsors.html' %}
+    </section>
+    {% endcache %}
+
+    <section id="venue" class="act">
+        {% include 'page/_venue.html' %}
+    </section>
+{% endblock %}
