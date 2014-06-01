@@ -2,3 +2,6 @@ Django>=1.6.1
 Pillow>=2.3.0
 django-summernote==0.5.10
 django-compressor==1.4
+django-solo==1.0.5
+hiredis==0.1.3
+redis==2.9.1

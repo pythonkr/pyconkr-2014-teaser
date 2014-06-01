@@ -24,6 +24,7 @@ LOCAL_APPS = (
     'pyconkr',
     'django_summernote',
     'compressor',
+    'solo',
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 

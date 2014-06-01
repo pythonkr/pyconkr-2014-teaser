@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.views.generic import TemplateView
 
-from pyconkr.models import Program, Sponsor, Speaker
+from pyconkr.models import Program, Sponsor, Speaker, SiteConfiguration
 
 
 class Home(TemplateView):
@@ -13,4 +13,6 @@ class Home(TemplateView):
         context['sponsors'] = Sponsor.objects.all()
         context['speakers'] = Speaker.objects.all()
         context['CACHE_TIMEOUT'] = settings.TEMPLATE_CACHE_TIMEOUT
+        config = SiteConfiguration.objects.get()
+        context['is_proposal_now'] = config.proposal_now
         return context

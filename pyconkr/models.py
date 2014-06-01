@@ -2,6 +2,8 @@
 from PIL import Image
 from django.conf import settings
 from django.db import models
+from solo.models import SingletonModel
+
 from pyconkr.lib import CacheDeleteMixin
 
 
@@ -51,4 +53,13 @@ class Sponsor(CacheDeleteMixin, models.Model):
         return self.title
 
 
+class SiteConfiguration(SingletonModel):
+    proposal_now = models.BooleanField(default=True)
+
+    def __unicode__(self):
+        return u"Site Configuration"
+
+    class Meta:
+        verbose_name = "Site Configuration"
+        verbose_name_plural = "Site Configuration"
 
