@@ -103,54 +103,14 @@
             <h2>PROGRAM</h2>
             <ul>
                 <div class="thread"></div>
+                {% for program in programs %}
                 <li>
-                    <span class="time">9:00</span>
+                    <span class="time">{{ program.start|date:"f" }}</span>
                     <div class="chain"></div>
-                    <span class="title">Registration</span>
-                    <span class="author">Ari Lacenski</span>
+                    <span class="title">{{ program.title }}</span>
+                    <span class="author">{{ program.speaker.name }}</span>
                 </li>
-                <li>
-                    <span class="time">10:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Keynote</span>
-                    <span class="author">Max Thayer</span>
-                </li>
-                <li>
-                    <span class="time">11:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Android: The Land that Python Forgot?</span>
-                    <span class="author">Juan Lavista Ferres</span>
-                </li>
-                <li>
-                    <span class="time">12:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Notable Features of Python</span>
-                    <span class="author">Kamal Marhubi</span>
-                </li>
-                <li>
-                    <span class="time">13:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Notable Features of Python</span>
-                    <span class="author">Kamal Marhubi</span>
-                </li>
-                <li>
-                    <span class="time">14:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Notable Features of Python</span>
-                    <span class="author">Kamal Marhubi</span>
-                </li>
-                <li>
-                    <span class="time">15:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Notable Features of Python</span>
-                    <span class="author">Kamal Marhubi</span>
-                </li>
-                <li>
-                    <span class="time">16:00</span>
-                    <div class="chain"></div>
-                    <span class="title">Notable Features of Python</span>
-                    <span class="author">Kamal Marhubi</span>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -159,30 +119,17 @@
         <div class="container-fluid">
             <h2>speakers</h2>
             <ul class="row">
+
+                {% for speaker in speakers %}
                 <li class="col-md-12">
-                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
+                    <div class="thumb"><img src="{{ speaker.picture.url }}" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
                     <p class="name">
-                        <span class="tech">Python</span>
-                        james powell
+                        <span class="tech">{{ speaker.company }}</span>
+                        {{ speaker.name }}
                     </p>
-                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
+                   {{ speaker.intro }}
                 </li>
-                <li>
-                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
-                    <p class="name">
-                        <span class="tech">Python</span>
-                        james powell
-                    </p>
-                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
-                </li>
-                <li>
-                    <div class="thumb"><img src="/static/img/dummy-speaker.png" alt=""><img class="frame" src="/static/img/frame.png" alt=""></div>
-                    <p class="name">
-                        <span class="tech">Python</span>
-                        james powell
-                    </p>
-                    James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC James Powell is a Python progammer residing in New York City. He is the co-chair of the NYC
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -192,12 +139,9 @@
             <h2>partners</h2>
             <p class="txt">thanks for support goes to</p>
             <ul class="row">
-                <li class="col-md-2"><img src="/static/img/dummy-partner1.png" alt=""></li>
-                <li class="col-md-2"><img src="/static/img/dummy-partner2.png" alt=""></li>
-                <li class="col-md-2"><img src="/static/img/dummy-partner3.png" alt=""></li>
-                <li class="col-md-2"><img src="/static/img/dummy-partner4.png" alt=""></li>
-                <li class="col-md-2"><img src="/static/img/dummy-partner5.png" alt=""></li>
-                <li class="col-md-2"><img src="/static/img/dummy-partner6.png" alt=""></li>
+                {% for sponsor in sponsors %}
+                <li class="col-md-2"><img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}"></li>
+                {% endfor %}
             </ul>
         </div>
     </section>
