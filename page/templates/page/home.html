@@ -43,7 +43,11 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#about" data-scroll="about">about</a></li>
-                    <li><a href="#program" data-scroll="program">program</a></li>
+                    {% if is_proposal_now %}
+                        <li><a href="#cfp" data-scroll="cfp">call for proposal</a></li>
+                    {% else %}
+                        <li><a href="#program" data-scroll="program">program</a></li>
+                    {% endif %}
                     <li><a href="#speaker" data-scroll="speaker">speaker</a></li>
                     <li><a href="#partner" data-scroll="partner">partner</a></li>
                     <li><a href="#venue" data-scroll="venue">venue</a></li>
@@ -62,8 +66,11 @@
     <section id="main">
         <div class="container-fluid">
             <h1>Pycon Korea 2014<span>PYCON KOREA <b>AUG 30TH - 31TH</b> in Seoul</span></h1>
-
-            <a class="register">REGISTER NOW<span>please register for more information</span></a>
+            {% if is_proposal_now %}
+                <a class="cfp" href="#cfp" data-scroll="cfp">Call for Proposal<span>발표자를 신청받고 있습니다</span></a>
+            {% else %}
+                <a class="register">REGISTER NOW<span>please register for more information</span></a>
+            {% endif %}
         </div>
     </section>
     
