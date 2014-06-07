@@ -12,6 +12,7 @@
 body {
 	font: 14px/1.42857 'Malgun Gothic', '맑은 고딕', Apple Gothic, dotum, '돋움', sans-serif;
 	color: #333;
+    line-height: 175%;
 	background-color: #fff;
 }
 
@@ -31,7 +32,7 @@ a:hover, a:active {
 	top: 0;
 	background: #fff;
 	z-index: 10;
-    
+
 	h1 {
 		position: absolute;
 		top: 11px;
