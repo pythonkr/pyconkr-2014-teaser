@@ -3,7 +3,16 @@ from fabric.api import local, run, cd, env, prefix
 
 env.hosts = ['dev.pycon.kr']
 env.user = 'deploy'
+env.target = 'dev'
+env.virt_activate = '. ~/venv.dev.pyconkr/bin/activate'
+env.apps_dir = '~/dev.pyconkr'
 
+def prod():
+    env.virt_activate = '. ~/venv.www.pyconkr/bin/activate'
+    env.apps_dir = '~/www.pyconkr'
+
+def dev():
+    pass
 
 def server_init():
     # ubuntu server only
@@ -28,8 +37,9 @@ def deploy(commit_id=None):
     rev = local('git rev-parse HEAD', capture=True)
     if commit_id:
         rev = str(commit_id)
-    with prefix('. ~/venv.pyconkr/bin/activate'):
-        with cd('~/pyconkr'):
+    
+    with prefix(env.virt_activate):
+        with cd(env.apps_dir):
             run('git fetch -p')
             run('git reset --hard %s' % rev)
             run('pip install -r requirements.pip')
