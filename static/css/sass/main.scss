@@ -31,14 +31,18 @@ a:hover, a:active {
 	top: 0;
 	background: #fff;
 	z-index: 10;
-
+    
 	h1 {
 		position: absolute;
 		top: 11px;
 		left: 50%;
-		margin: 0 0 0 -87px;
+		margin: 0 0 0 -118px;
 		z-index: 10;
-		@include spr(174px, 100px);
+        background: url(/static/img/logo.png) no-repeat;
+        background-size: 198px 64px;
+        width: 198px;
+        height: 64px;
+        @include hide-text();
 	}
 
 	.m-menu {
@@ -347,7 +351,6 @@ section {
         }
     }
 
-
     .contents {
         ul {
             padding: 0;
@@ -358,14 +361,17 @@ section {
     }
 
     .schedule {
-        dt {
-            clear: both;
-            float: left;
-            width: 130px;
-            line-height: 1.6;
-        }
-        dd {
-            float: left;
+        dl {
+            overflow: hidden;
+            dt {
+                clear: both;
+                float: left;
+                width: 130px;
+                line-height: 1.6;
+            }
+            dd {
+                float: left;
+            }
         }
     }
 }
