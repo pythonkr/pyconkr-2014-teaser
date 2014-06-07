@@ -135,7 +135,7 @@
             <div class="request">
                 <h3>신청</h3>
                 <p>발표를 원하시는 분은 다음 메일로 발표하실 내용과 발표자분의 설명을 보내주세요</p>
-                <p class="email"><a href="mailto:pycon@python.kr">pycon@python.kr</a></p>
+                <p class="email"><a href="mailto:pycon@python.kr?subject=[CFP]">pycon@python.kr</a></p>
             </div>
 
             <div class="schedule col-md-offset-4 col-md-4">
@@ -196,6 +196,8 @@
         <div class="container-fluid">
             <h2>partners</h2>
             <p class="txt">thanks for support goes to</p>
+            <p>스폰서쉽을 원하시는 업체,기업, 단체는 다음 메일로 연락주시기 바랍니다.</p>
+            <p class="email"><a href="mailto:pycon@python.kr?subject=[CALL FOR SPONSER]">pycon@python.kr</a></p>
             <ul class="row">
                 {% for sponsor in sponsors %}
                 <li class="col-md-2"><img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}"></li>
