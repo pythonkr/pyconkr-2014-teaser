@@ -3,6 +3,13 @@ from django.views.generic import TemplateView
 
 from pyconkr.models import Program, Sponsor, Speaker, SiteConfiguration
 
+class Coc(TemplateView):
+    template_name = 'page/coc.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Coc, self).get_context_data(**kwargs)
+        return context
+ 
 
 class Home(TemplateView):
     template_name = 'page/home.html'
