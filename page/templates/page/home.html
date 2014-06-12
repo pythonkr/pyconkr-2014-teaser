@@ -49,7 +49,7 @@
                         <li><a href="#program" data-scroll="program">program</a></li>
                         <li><a href="#speaker" data-scroll="speaker">speaker</a></li>
                     {% endif %}
-                    <li><a href="#partner" data-scroll="partner">partner</a></li>
+                    <li><a href="#sponsor" data-scroll="sponsor">sponsor</a></li>
                     <li><a href="#venue" data-scroll="venue">venue</a></li>
                 </ul>
             </nav>
@@ -65,9 +65,9 @@
 
     <section id="main">
         <div class="container-fluid">
-            <h1>PyCon Korea 2014<span>PYCON KOREA <b>AUG 30TH</b> in Seoul</span></h1>
+            <h1>PyCon Korea 2014<span>PYCON KOREA <b>AUG 30TH</b> at Seoul</span></h1>
             {% if is_proposal_now %}
-                <a class="cfp" href="#cfp" data-scroll="cfp">Call for Proposal<span>발표자를 신청받고 있습니다</span></a>
+                <a class="cfp" href="#cfp" data-scroll="cfp">Call for Proposal<span>발표자 접수중</span></a>
             {% else %}
                 <a class="register">REGISTER NOW<span>please register for more information</span></a>
             {% endif %}
@@ -79,27 +79,26 @@
             <h2>About</h2>
             <h3>PyCon Korea</h3>
             <p class="date">30 Aug 2014, Seoul</p>
-	    <p class="txt">PyCon 은 오픈소스인 Python 언어를 사용하고, 개발하는 커뮤니티가 모이는 행사입니다. <br>
-	    개발자들의 Python 사용을 장려하며 조직화를 돕고 성장을 돕고자 합니다. <br/>
+	    <p class="txt">PyCon은 오픈소스 프로그래밍 언어인 Python 사용자들을 위한 행사입니다. <br>
+	    올해 한국에서 처음으로 열리는 PyCon Korea는 개발자들의 지식과 경험을 공유하여 한국 개발자 커뮤니티와 Python 의 활성화에 기여하고자 합니다. <br/>
             <ul class="row">
                 <li class="col-md-4">
                     <i class="ico ico-1"></i>
-                    <strong>The Vision</strong>
-		    한국 Python User들과 함께 하는 미래를 꿈꿉니다. <br/>
+                    <strong>Insight</strong>
+		    실제 사례를 통해보는 Python의 새로운 모습
                 </li>
                 <li class="col-md-4">
                     <i class="ico ico-2"></i>
-                    <strong>Meetings</strong>
-		    한국에서 처음 시도하는 <br/>
-		    Python User, Developer 들의 모임입니다.
+                    <strong>Networking</strong>
+		    한국 Python 사용자들과 네트워킹 할 수 있는 기회
                 </li>
                 <li class="col-md-4">
                     <i class="ico ico-3"></i>
                     <strong>Hack</strong>
-		    Python 에 대해서 물어보고, <br/>
-		    같이 Hacking 을 할수 있는 기회입니다.
+		    Python에 대한 경험을 공유하고 Hacking 할 수 있는 자리 
                 </li>
             </ul>
+	    <p class="txt"><a href="/coc"><strong>Code Of Conduct</strong></a></p>
         </div>
     </section>
 
@@ -110,42 +109,49 @@
 
             <div>
                 <h3>주제</h3>
-                <p>시작하시는 분들을 위한 Start 트랙과 더 나아가시는 분들을 위한 Running 트랙 두가지로 진행됩니다. <br/>트랙별 다루는 주제들은 다음과 같습니다.</p>
+                <p>시작하시는 분들을 위한 Start 트랙과 더 나아가시는 분들을 위한 Running 트랙 두가지로 진행됩니다. <br/>트랙별 주제는 다음과 같습니다.</p>
 
                 <div class="contents row col-md-offset-3">
                     <div class="content start col-md-3">
                         <h4>Start</h4>
                         <ul>
-                            <li>개발환경설정</li>
+                            <li>개발환경</li>
                             <li>사용경험</li>
-                            <li>기초웹</li>
+                            <li>웹개발</li>
+                            <li>자동화</li>
                         </ul>
                     </div>
                     <div class="content running col-md-3">
                         <h4>Running</h4>
                         <ul>
+                            <li>BioPython</li>
                             <li>Data Analysis</li>
                             <li>Scalable Infrastructure</li>
+                            <li>Python in Enterprise<li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="request">
-                <h3>신청</h3>
-                <p>발표를 원하시는 분은 다음 메일로 발표하실 내용과 발표자분의 설명을 보내주세요</p>
-                <p class="email"><a href="mailto:pycon@python.kr?subject=[CFP]">pycon@python.kr</a></p>
+                <h3> 발표신청</h3>
+                <p>다른 Python 사용자들을 위해 귀한 경험을 공유해주실 분은<br/>
+		 다음 메일로 발표자 소개와 발표하실 내용에 대한 간략한 설명을 보내주세요. <br/>
+		30분정도의 본내용과  10분정도의 질답이 있는 정규발표와<br/>
+		5분내에 짤막하게 발표하는 Lightning Talk 가 있습니다.  </p>
+		
+                <p class="email"><a href="mailto:pycon@python.or.kr?subject=[CFP]">pycon@python.or.kr</a></p>
             </div>
 
             <div class="schedule col-md-offset-4 col-md-4">
                 <h3>일정</h3>
                 <dl>
-                    <dt>2014/06/01(Sun)</dt>
-                        <dd>접수 시작</dd>
                     <dt>2014/07/06(Sun)</dt>
-                        <dd>접수 마감</dd>
+                        <dd>발표접수 마감</dd>
                     <dt>2014/07/21(Mon)</dt>
-                        <dd>선정 발표</dd>
+                        <dd>발표선정 발표</dd>
+                    <dt>2014/08/01(Fri)</dt>
+                        <dd>참가신청시작</dd>
                     <dt>2014/08/30(Sat)</dt>
                         <dd>PyCon!</dd>
                 </dl>
@@ -191,12 +197,12 @@
     </section>
     {% endif %}
 
-    <section id="partner" data-anchor="partner">
+    <section id="sponsor" data-anchor="sponsor">
         <div class="container-fluid">
-            <h2>partners</h2>
+            <h2>sponsors</h2>
             <p class="txt">thanks for support goes to</p>
-            <p>스폰서쉽을 원하시는 업체,기업, 단체는 다음 메일로 연락주시기 바랍니다.</p>
-            <p class="email"><a href="mailto:pycon@python.kr?subject=[CALL FOR SPONSER]">pycon@python.kr</a></p>
+            <p>행사에 도움을 주실 기업, 단체, 개인은 다음 메일로 연락주시기 바랍니다</p>
+            <p class="email"><a href="mailto:pycon@python.or.kr?subject=[CFS]">pycon@python.or.kr</a></p>
             <ul class="row">
                 {% for sponsor in sponsors %}
                 <li class="col-md-2"><img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}"></li>
@@ -215,13 +221,14 @@
 
     <footer id="footer">
         <img src="/static/img/footer-logo.png">
-        <p>Copyright ©Python Korea.All rights Reserved.</p>
+        <p>Copyright ©Python Korea. All rights Reserved.</p>
     </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.1.min.js"><\/script>')</script>
 {% compress js %}
+<script src="/static/js/showdown.js"></script>
 <script src="/static/js/main.js"></script>
 {% endcompress %}
 </body>

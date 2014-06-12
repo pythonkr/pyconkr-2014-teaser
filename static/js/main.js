@@ -38,6 +38,11 @@ var pyconKr = (function ($) {
       });
       eventLocationMarker.setMap(map);
     });
+    // showdown markdown
+    var mdown = $('.markdown-content').html();
+    var converter = new Showdown.converter();
+    var html = converter.makeHtml(mdown);
+    $('.markdown-content').html(html);
   }
 
   return {

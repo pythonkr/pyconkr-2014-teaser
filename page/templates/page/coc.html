@@ -1,0 +1,139 @@
+<!doctype html>{% load compress %}
+<!--[if IE 7]>
+<html class="ie ie7" lang="ko">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="ko">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html class="no-js" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PyCon Korea</title>
+    <meta name="description" content="파이콘 코리아">
+
+    <meta property="og:title" content="파이콘 코리아">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:site_name" content="파이콘 코리아">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="파이콘 코리아">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-l.png" media="screen and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-s.png" media="screen and (-webkit-device-pixel-ratio: 1.5)">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/app-l.png">
+    {% compress css %}
+    <link type="text/x-sass" rel="stylesheet" href="/static/css/sass/main.scss" charset="utf-8">
+    {% endcompress %}
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/static/css/main_ie.css"><![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="body">
+		<div class="box">
+		<div class="markdown-content">PyCon KR is a community conference intended for networking and collaboration in the developer community.
+
+We value the participation of each member of the Python community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by PyCon or not.
+
+To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any PyCon event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout the event.
+
+The Short Version
+-----------------
+
+PyCon is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form.
+
+All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any conference venue, including talks.
+
+Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon.
+
+Attendees violating these rules may be asked to leave the conference without a refund at the sole discretion of the conference organizers.
+
+Thank you for helping make this a welcoming, friendly event for all.
+
+The Longer Version
+------------------
+
+Harassment includes offensive communication related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
+
+Participants asked to stop any harassing behavior are expected to comply immediately.
+
+Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.
+
+Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon.
+
+If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+
+Contact Information
+-------------------
+
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "PyCon Staff" t-shirts. You may also contact hotel staff and ask to be put in touch with the conference chair &mdash; Bae KwonHan.
+
+If the matter is especially urgent, please call/contact any of these individuals:
+
+- Bae KwonHan, Event Coordinator, Conference Chair<br>
+[darjeeling@gmail.com](darjeeling@gmail.com "darjeeling@gmail.com")<br>
++82 (10) 2077-4788<br>
+
+- Kim Younggun, Conference Co-Chair<br>
+[scari.net@gmail.com](mailto:scari.net@gmail.com "scari.net@gmail.com")<br>
+
+Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+
+[Based on Revision](https://github.com/python/pycon-code-of-conduct/tree/649f6db082ee8068520959a7c498dae14d598b8e "Based on Revision")
+
+License
+-------
+
+This Code of Conduct was forked from the example policy from the [Geek Feminism wiki, created by the Ada Initiative and other volunteers.](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy) which is under a Creative Commons Zero license. 
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /></div>
+	</div>
+</div>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.1.min.js"><\/script>')</script>
+{% compress js %}
+<script src="/static/js/showdown.js"></script>
+<script src="/static/js/main.js"></script>
+{% endcompress %}
+</body>
+</html>
+{% comment %}
+{% extends 'base.html' %}
+{% load cache %}
+{% block contents %}
+    <section id="about" class="act">
+        {% include 'page/_about.html' %}
+    </section>
+
+    {% cache CACHE_TIMEOUT programs %}
+    <section id="programs" class="act">
+        {% include 'page/_programs.html' %}
+    </section>
+    {% endcache %}
+
+    {% cache CACHE_TIMEOUT speakers %}
+    <section id="speakers" class="act">
+        {% include 'page/_speakers.html' %}
+    </section>
+    {% endcache %}
+
+    {% cache CACHE_TIMEOUT sponsors %}
+    <section id="sponsors" class="act">
+        {% include 'page/_sponsors.html' %}
+    </section>
+    {% endcache %}
+
+    <section id="venue" class="act">
+        {% include 'page/_venue.html' %}
+    </section>
+{% endblock %}
+{% endcomment %}
