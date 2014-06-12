@@ -1,0 +1,23 @@
+upstream app_server {
+        server unix:///var/run/uwsgi/app/www.pyconkr/socket;
+}
+
+server {
+        listen 80;
+
+        root /usr/share/nginx/html;
+
+        # Make site accessible from http://localhost/
+        server_name www.pycon.kr;
+
+        location / {
+                uwsgi_pass app_server;
+                include uwsgi_params;
+        }
+        location /media {
+                alias /home/deploy/www.pyconkr/media/;
+        }
+        location /static {
+                alias /home/deploy/www.pyconkr/collected_static/;
+        }
+}
