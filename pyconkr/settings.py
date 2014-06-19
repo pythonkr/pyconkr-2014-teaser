@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'x)mp5v)30@fc7#pnnoz-_yeg**=e6kz6x8aiwvd(dio5m2@4_3'
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['localhost', 'pycon.kr', 'dev.pycon.kr', 'www.pycon.kr']
+ALLOWED_HOSTS = ['localhost', 'pycon.kr', 'dev.pycon.kr', 'www.pycon.kr', 'kr.pycon.org']
 COMPRESS_OFFLINE = True
 # Application definition
 DJANGO_APPS = (
