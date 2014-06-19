@@ -450,6 +450,33 @@ section {
 	}
 }
 
+#sponsor {
+    .center-list {
+        position: relative;
+        float: right;
+        right: 50%;
+        ul {
+            position: relative;
+            float: right;
+            right: -50%;
+        }
+    }
+    ul.sponsors {
+        margin-top: 30px;
+        padding: 0;
+        left: 50%;
+        overflow: hidden;
+        li.sponsor {
+            list-style: none;
+            float: left;
+            margin-right: 20px;
+            img {
+                height: 40px;
+            }
+        }
+    }
+}
+
 #venue {
 	padding-bottom: 0;
 	background-color: #fff;
