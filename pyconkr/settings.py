@@ -25,6 +25,7 @@ LOCAL_APPS = (
     'django_summernote',
     'compressor',
     'solo',
+    'south',
 )
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 

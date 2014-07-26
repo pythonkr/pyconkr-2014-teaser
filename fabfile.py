@@ -45,5 +45,6 @@ def deploy(commit_id=None):
             run('pip install -r requirements.pip')
             run('python manage.py collectstatic --noinput')
             run('python manage.py compress')
+            run('python manage.py migrate')
             run('find . -name "*.pyc" -delete')
             run('sudo /etc/init.d/uwsgi reload')
