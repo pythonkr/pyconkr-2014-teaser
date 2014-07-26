@@ -204,7 +204,7 @@
               <ul class="sponsors">
                   {% for sponsor in sponsors %}
                   <li class="sponsor">
-                    <a href="">
+                  <a href="{{ sponsor.link }}">
                       <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}">
                     </a>
                   </li>
