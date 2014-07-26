@@ -200,25 +200,16 @@
     <section id="sponsor" data-anchor="sponsor">
         <div class="container container-fluid">
             <h2>sponsors</h2>
-	    <!--
-            <p class="txt">thanks for support goes to</p>
-            <p>행사에 도움을 주실 기업, 단체, 개인은 다음 메일로 연락주시기 바랍니다</p>
-            <p class="email"><a href="mailto:pycon@python.or.kr?subject=[CFS]">pycon@python.or.kr</a></p>
-{#            <ul class="row">#}
-{#                {% for sponsor in sponsors %}#}
-{#                <li class="col-md-2"><img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}"></li>#}
-{#                {% endfor %}#}
-{#            </ul>#}
-		-->
             <div class="center-list">
-                <ul class="sponsors">
-			<li class="sponsor">
-				<a href="http://www.google.com"><img src="/static/img/sponsor-google.png" alt="google"></a></li>
-			<li class="sponsor">
-				<a href="http://developer.naver.com/wiki/pages/techSupport"><img src="/static/img/NAVER_D2_banner_164.png" alt="naver d2"></a></li>
-			<li class="sponsor">
-				<a href="https://github.com/"><img src="/static/img/sponsor-github.png" alt="github"><a></li>
-                </ul>
+              <ul class="sponsors">
+                  {% for sponsor in sponsors %}
+                  <li class="sponsor">
+                    <a href="">
+                      <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.title }}">
+                    </a>
+                  </li>
+                  {% endfor %}
+              </ul>
             </div>
         </div>
     </section>
