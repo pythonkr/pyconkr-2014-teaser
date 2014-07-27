@@ -18,7 +18,7 @@ class SponsorAdmin(admin.ModelAdmin):
     search_fields = ('title', 'link')
 
 
-class SpeakerAdmin(admin.ModelAdmin):
+class SpeakerAdmin(SummernoteModelAdmin):
     list_display = ('id', 'name', 'company', 'link')
     ordering = ('-id',)
     search_fields = ('name', 'company', 'link', 'intro')

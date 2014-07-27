@@ -11,7 +11,7 @@ class Speaker(CacheDeleteMixin, models.Model):
     picture = models.ImageField(upload_to='speaker/')
     name = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
-    intro = models.CharField(max_length=1024)
+    intro = models.TextField(default=None)
     link = models.URLField(max_length=512)
 
     template_cache_names = ['speakers']
@@ -31,6 +31,11 @@ class Speaker(CacheDeleteMixin, models.Model):
 
 
 class Program(CacheDeleteMixin, models.Model):
+    ROOM_CHOICES = (
+        ('a', '젬마홀'),
+    )
+    room = models.CharField(max_length=2, choices=ROOM_CHOICES,
+                            default='a')
     title = models.CharField(max_length=100)
     speaker = models.ForeignKey(Speaker)
     start = models.DateTimeField()
