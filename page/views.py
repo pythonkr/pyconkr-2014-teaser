@@ -23,4 +23,5 @@ class Home(TemplateView):
         context['CACHE_TIMEOUT'] = settings.TEMPLATE_CACHE_TIMEOUT
         config = SiteConfiguration.objects.get()
         context['is_proposal_now'] = config.proposal_now
+        context['registration_url'] = config.registration_url
         return context
