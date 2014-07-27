@@ -3,7 +3,7 @@ from django.contrib import admin
 from solo.admin import SingletonModelAdmin
 from django_summernote.admin import SummernoteModelAdmin
 
-from models import Speaker, Sponsor, Program, SiteConfiguration
+from models import Speaker, Sponsor, Program, SiteConfiguration, Room
 
 
 class ProgramAdmin(SummernoteModelAdmin):
@@ -24,6 +24,7 @@ class SpeakerAdmin(SummernoteModelAdmin):
     search_fields = ('name', 'company', 'link', 'intro')
 
 
+admin.site.register(Room)
 admin.site.register(Speaker, SpeakerAdmin)
 admin.site.register(Program, ProgramAdmin)
 admin.site.register(Sponsor, SponsorAdmin)

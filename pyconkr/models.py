@@ -30,18 +30,26 @@ class Speaker(CacheDeleteMixin, models.Model):
         del image
 
 
+class Room(models.Model):
+    name = models.CharField(max_length=50)
+
+    def programs(self):
+        return self.program_set.all()
+    
+    def __unicode__(self):
+        return self.name
+
 class Program(CacheDeleteMixin, models.Model):
-    ROOM_CHOICES = (
-        ('a', '젬마홀'),
-    )
-    room = models.CharField(max_length=2, choices=ROOM_CHOICES,
-                            default='a')
+    room = models.ForeignKey(Room, default=None)
     title = models.CharField(max_length=100)
     speaker = models.ForeignKey(Speaker)
     start = models.DateTimeField()
     description = models.TextField()
 
     template_cache_names = ['programs']
+
+    class Meta:
+        ordering = ['start']
 
     def __unicode__(self):
         return self.title
@@ -60,6 +68,7 @@ class Sponsor(CacheDeleteMixin, models.Model):
 
 class SiteConfiguration(SingletonModel):
     proposal_now = models.BooleanField(default=True)
+    registration_url = models.URLField()
 
     def __unicode__(self):
         return u"Site Configuration"

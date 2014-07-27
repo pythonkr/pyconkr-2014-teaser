@@ -165,13 +165,16 @@
             <h2>PROGRAM</h2>
             <ul>
                 <div class="thread"></div>
-                {% for program in programs %}
+                {% for room in rooms %}
+                <h3>{{ room }}</h3>
+                {% for program in room.programs %}
                 <li>
                     <span class="time">{{ program.start|date:"f" }}</span>
                     <div class="chain"></div>
                     <span class="title">{{ program.title }}</span>
                     <span class="author">{{ program.speaker.name }}</span>
                 </li>
+                {% endfor %}
                 {% endfor %}
             </ul>
         </div>
@@ -189,7 +192,7 @@
                         <span class="tech">{{ speaker.company }}</span>
                         {{ speaker.name }}
                     </p>
-                   {{ speaker.intro }}
+                   {{ speaker.intro|safe }}
                 </li>
                 {% endfor %}
             </ul>
