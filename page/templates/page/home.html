@@ -165,9 +165,9 @@
             <h2>PROGRAM</h2>
             <ul>
                 <div class="thread"></div>
-                {% for room in rooms %}
+                {% for track in tracks %}
                 <h3>{{ room }}</h3>
-                {% for program in room.programs %}
+                {% for program in track.programs %}
                 <li>
                     <span class="time">{{ program.start|date:"f" }}</span>
                     <div class="chain"></div>

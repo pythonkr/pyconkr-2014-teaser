@@ -3,7 +3,8 @@ from django.contrib import admin
 from solo.admin import SingletonModelAdmin
 from django_summernote.admin import SummernoteModelAdmin
 
-from models import Speaker, Sponsor, Program, SiteConfiguration, Room
+from models import (Speaker, Sponsor, Program,
+                    SiteConfiguration, Room, Track)
 
 
 class ProgramAdmin(SummernoteModelAdmin):
@@ -25,6 +26,7 @@ class SpeakerAdmin(SummernoteModelAdmin):
 
 
 admin.site.register(Room)
+admin.site.register(Track)
 admin.site.register(Speaker, SpeakerAdmin)
 admin.site.register(Program, ProgramAdmin)
 admin.site.register(Sponsor, SponsorAdmin)

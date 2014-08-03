@@ -39,8 +39,18 @@ class Room(models.Model):
     def __unicode__(self):
         return self.name
 
+class Track(models.Model):
+    name = models.CharField(max_length=100)
+
+    def programs(self):
+        return self.program_set.all()
+
+    def __unicode__(self):
+        return self.name
+
 class Program(CacheDeleteMixin, models.Model):
     room = models.ForeignKey(Room, default=None)
+    track = models.ForeignKey(Track, default=None, null=True)
     title = models.CharField(max_length=100)
     speaker = models.ForeignKey(Speaker)
     start = models.DateTimeField()

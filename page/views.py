@@ -1,7 +1,8 @@
 from django.conf import settings
 from django.views.generic import TemplateView
 
-from pyconkr.models import Program, Sponsor, Speaker, SiteConfiguration, Room
+from pyconkr.models import (Program, Sponsor, Speaker,
+                            SiteConfiguration, Room, Track)
 
 class Coc(TemplateView):
     template_name = 'page/coc.html'
@@ -18,6 +19,7 @@ class Home(TemplateView):
         context = super(Home, self).get_context_data(**kwargs)
         #context['programs'] = Program.objects.all().order_by('start')
         context['rooms'] = Room.objects.all()
+        context['tracks'] = Track.objects.all()
         context['sponsors'] = Sponsor.objects.all()
         context['speakers'] = Speaker.objects.all()
         context['CACHE_TIMEOUT'] = settings.TEMPLATE_CACHE_TIMEOUT
