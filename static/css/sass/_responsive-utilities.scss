@@ -49,10 +49,15 @@
   @include responsive-visibility('.visible-lg');
 }
 
+@media (max-width: 1110px) {
+    @include responsive-invisibility('.hidden-xs');
+    #header .m-menu { display: block; }
+    #nav, .utils { display: none; }
+}
+
 @media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.hidden-xs');
-  #nav, .utils { display: none; }
-  #header .m-menu, .active #nav { display: block; }
+  .active #nav { display: block; }
   #nav {
     position: fixed;
     top: 80px;
