@@ -56,6 +56,10 @@
 }
 
 @media (max-width: $screen-xs-max) {
+    #speaker li { padding: 200px 0 0 0; }
+}
+
+@media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.hidden-xs');
   .active #nav { display: block; }
   #nav {
